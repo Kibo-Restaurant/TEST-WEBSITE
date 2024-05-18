@@ -30,7 +30,7 @@ body{
   text-decoration:none;
   
 }/*Style not applied-Name is not clickable*/
-.container-fluid #restaurant-name a:hover {
+.container #restaurant-name a:hover {
   text-decoration:none;
   background-color:#E7E7E7;
 }
@@ -68,7 +68,7 @@ text-align: ri
 3ght;
 padding-right: 15px;
 }
-.container-fluid button.navbar-toggler,.container-fluid.navbar-toggler-icon{
+.containerbutton.navbar-toggler,.container.navbar-toggler-icon{
 border:1px solid #61122f;
 }
 #search-box{/*form*/
@@ -222,6 +222,7 @@ line-height: 2;
   margin-left: auto;
   margin-bottom: 20px;
   max-width:250px;
+  max-height:150px;
 }
 .menu-item-photo div{
   position:absolute;
@@ -244,7 +245,7 @@ h3.menu-item-title{
 
 /******Extra extra Large******/
 @media(min-width:1400px){
-  .jumbotron{
+  .container .jumbotron{
     background: url('../Kibo test images/Jumbotron 1400 (1).png') no-repeat;
     height:788px;
 
@@ -253,7 +254,7 @@ h3.menu-item-title{
 
 /******* Extra Large devices Only *********/
 @media (min-width:1200px)and (max-width:1399px){
-  .jumbotron{
+  .container .jumbotron{
     background: url('../Kibo test images/Jumbotron 1200 (2).png') no-repeat;
   height:675px;
   }
@@ -261,19 +262,23 @@ h3.menu-item-title{
 }
 /*******Large devices only**********/
 @media(min-width:992px) and (max-width:1199px) {
-  #custom-logo{
-    width:100px;
-    height:106px;
-    margin:5px 5px 5px 0; 
-  }
-  .jumbotron{
+  
+  
+  .container .jumbotron{
     background: url('../Kibo test images/Jumbotron\ 992\ \(2\).png') no-repeat;
     height:558px;
    }
+   
+    #custom-logo {
+     max-width:100px;
+     max-height:100px;
+     margin:0px 15px 10px 0px;
+   }
+
   }
 /*******Medium devices only*******/
 @media(min-width:768px) and (max-width:991px){
-  .jumbotron{
+  .container .jumbotron{
     background: url('../Kibo test images/Jumbotron\ 768\(2\).png') no-repeat;
     height:432px;
   }
@@ -287,7 +292,7 @@ h3.menu-item-title{
 }
 /********small devices only* ******/
 @media (min-width:576px) and (max-width:767px) {
-  .jumbotron{
+  .container .jumbotron{
     background: url('../Kibo test images/Jumbotron\ 576\ \(3\).png') no-repeat;
     height:324px;
     background-size: cover;
@@ -303,14 +308,14 @@ h3.menu-item-title{
 /******** extra small only*********/
 @media (min-width:0px) and (max-width:575px) {
    /**AT THIS BREAK POINT JUMBOTRON IS NOT COVERING WHOLE DIV UNTIL DIV REACHES 500PXS WIDE WHEN SQUEEZING --I need to make the image longer going down**/
-   .jumbotron{
+   .container .jumbotron{
   background: url('../Kibo test images/Jumbotron 500 (3).png') no-repeat;
   height:auto;
   width:auto;
   background-origin: content-box;
 }
 #menu-tile, #specials-tile, #map-tile{
-  width:476px;
+  width:100%;
   margin:2px auto 2px;}
 
   #panel-footer{
@@ -334,11 +339,11 @@ h3.menu-item-title{
 
 @media screen and (max-width:767){
 /****Restaurant name****/
-.container-fluid{
+.container{
   padding-top:10px;
   height:80px;
 }
-.container-fluid #restaurant-name{
+.container #restaurant-name{
   padding-top:10px;
   font-size:5vw; /* 1 vw =1% of viewport width*/
 }
