@@ -1,14 +1,24 @@
+/**Aloja font to add to body tag**/
+ @font-face{
+  font-family:'Aloja';
+     src: url('../fonts/Aloja Ligh 400.otf') format ('opentype')
+          url('../fonts/Aloja-Light.woff') format ('woff'),
+          url('../fonts/Aloja-Light.otf') format ('opentype');
+}        
 
 body{
-    font-size:16px;
-    color: #fff;
-    background-color: #61122f ;
-    font-family: "Oxygen", sans-serif;
- }
+  font-size: 16px;
+  font-family:'Aloja', sans-serif;
+  background-color:#ECE5DC;
+  /* color: #000000 ;
+ 
+  font-family: "Oxygen", sans-serif; */
+} 
+
  /**START HEADER OR NAV-BAR**/
 /**Navbar Color**/
 #navbar-color{
-  background-color: #f6b319;
+  background-color: #ffa500;
 }
 .navbar-brand img{/*logo sizing*/
   width: 106px;
@@ -18,8 +28,8 @@ body{
 }
 #restaurant-name{
   /*Restaurant name*/
-  font-family: "Lora", serif;
-  color:#557c3e;
+ /* font-family: "Aloja", sans-serif;*/
+  color:#000000;
   font-size:2em;
   text-transform:uppercase;
   font-weight:bold;
@@ -38,7 +48,7 @@ body{
   margin-top:10px;
 }
 #nav-list a{
-  color:#951C49;
+  color:#000000;
   text-align: center;
 }
 #nav-list a:hover, a:focus{
@@ -47,14 +57,15 @@ body{
 #nav-list a span{
   font-size:1.8 em;
 }
-#phone{
+/* #phone{
   margin-top:5px;
+  position:center;
 }
 #phone{
   margin-top:2px;
  align-content:right;
   padding-bottom:0;
-  font-size:1.2em;
+  font-size:1.2em; */
   
 }
 #phone a{/*Phone number*/
@@ -69,7 +80,7 @@ text-align: ri
 padding-right: 15px;
 }
 .containerbutton.navbar-toggler,.container.navbar-toggler-icon{
-border:1px solid #61122f;
+border:1px solid #000000;
 }
 #search-box{/*form*/
   text-align: right;
@@ -115,19 +126,21 @@ line-height: 2;
   margin-top:25px;
 } ***/
 /**HOME PAGE*/
-.container.jumbotron{
+/* .container.jumbotron{
   box-shadow:0 0 50px #3F0C1F;
   border:2px solid #3F0C1F;
   max-width:100%;
   height:auto;
   padding:auto;
   margin:auto;
-  /**min-height:50vh;**/
+  /**min-height:50vh;**
   position:relative;
   color:white;
   text-shadow:2px 2px 2px rgba(0,0,0,.2);
-  /***OBJECT DOES NOT FIT IN DIV IN SMALL AND MEDIUM SCALE DEVICES ***/
-}
+  /***OBJECT DOES NOT FIT IN DIV IN SMALL AND MEDIUM SCALE DEVICES ***
+} */
+
+
 .color-overlay{
   width:100%;
   height:auto;
@@ -136,17 +149,61 @@ line-height: 2;
 .jumbotron-text{
   font-size:4em;
 }**/
-#menu-tile,#specials-tile, #map-tile {
+
+/*Start of Carosel */
+.carousel{
+  position:relative;
+  max-width:100%;
+  overflow: hidden;
+  margin: auto;
+  height: 400px; /*This is an Adjustable*/
+
+}
+.carousel-container{
+  display:flex;
+  transition: transform 0.5s ease-in-out;
+  height:100%;
+}
+.carousel-slide{
+  min-width:100%;
+  box-sizing: border-box;
+}
+.carousel-slide img{
+  width: 100%;
+  height:100%;
+  object-fit:contain; /* contain is adjustable to cover.  object-fit:cover =>>Ensures images 
+  cover the slide area without distortion*/
+  display:block;
+}
+.prev, .next{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background-color:rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index:10;
+ }
+.prev{
+  left:10px;
+}
+.next{
+  right: 10px;
+}
+
+#menu-tile,#specials-tile, #menu-tile1, #specials-tile1, #services-tile, #map-tile {
   height: 250px;
   width: 100%;
   margin-bottom: 15px;
   margin-left:auto;
   margin-right:auto;
   position: relative;
-  border: 2px solid #3F0C1F;
+  border: 2px solid #000000;
   overflow:hidden;
 }
-#menu-tile:hover,#specials-tile:hover, #map-tile:hover{
+#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover{
   box-shadow:0 1px 5px 1px #cccccc;
 }
 #menu-tile{
@@ -157,7 +214,18 @@ line-height: 2;
   background: url('../Kibo test images/Kibo specials photo (476).png') no-repeat;
   background-position:center;
 }
-#menu-tile span, #specials-tile span, #map-tile span{
+#menu-tile1{
+  background: url('../Kibo test images/Kibo Menu photo 2(476).jpg') no-repeat;
+  background-position:center;
+
+}
+#specials-tile1{
+  background: url('../Kibo test images/Kibo Menu photo1(476).png') no-repeat;
+  background-position:center;
+
+}
+
+#services-tile span, #map-tile span{
   position: absolute;
   bottom:0;
   right:0;
@@ -169,11 +237,35 @@ line-height: 2;
   color:#fff;
   opacity:.8;
 }
+
+
+#loading {
+  display: none; /* Hide the loading gif by default**/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  z-index:1000;
+}
+#error-message{
+  display: none; /**Hide the error message by default**/
+  color: #ff0000;/**if direct In HTML Main doc= style="color:red; display:none;*/
+  font-weight: bold;
+}
+
+
+#error-info{
+  display: none; /**Hide the error message by default**/
+  color: #ff0000;/**if direct In HTML Main doc= style="color:red; display:none;*/
+  font-weight: bold;
+}
+
+
 /** END OF HOME PAGE**/
 /*MENU PAGE PAGE**/
 .category-tile{
   position: relative;
-  border: 2px solid #3F0C1F;
+  border: 2px solid #ECE5DC;
   overflow:hidden;
   width:200px;
   height:200px;
@@ -187,7 +279,7 @@ line-height: 2;
   text-align:center;
   font-size:1.2em;
   text-transform: uppercase;
-  background-color:#000;
+  background-color:#ECE5DC;
   color: #fff;
   opacity: .8;
 }
@@ -212,10 +304,11 @@ line-height: 2;
 }
 .menu-item-tile .menu-item-price span{
   font-size: .6em;
+
 }
 .menu-item-photo {
   position:relative;
-  border:2px solid #3f0c1f;
+  border:2px solid #e0d3c2;
   overflow:hidden;
   padding: 0;
   margin-right: -15px;
@@ -224,23 +317,65 @@ line-height: 2;
   max-width:250px;
   max-height:150px;
 }
-.menu-item-photo div{
+.tile-number{
   position:absolute;
-  bottom:0;
-  right:0;
-  width:80px;
+  /*bottom:1;
+  right:1;
+  top: 1;
+  left: 1;*/
+  width:30px;
   background-color:#557c3e;
   text-align:center;
 }
 .menu-item-description{
 padding-right:30px;
 }
-h3.menu-item-title{
+.menu-item-title{
   margin:0 0 10px;
 }
 .menu-item-details{
   font-size: .9em;
   font-style: italic;
+  color:#000000;
+}
+/*CAROUSEL */
+@media (max-width: 768px) {
+  .prev, .next{
+    padding: 5px;
+  }  
+}
+/**End of carousel**/
+
+/*SLow Loading*/
+.slow-load {
+  background-color: grey; /*White for images*/
+  display:block;
+  width: 100%; /*Can be adjusted*/
+  height: auto; /*Can be adjusted*/
+  opacity: 0; /*Hide images and alt text initially*/
+  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease; /*Smootth transition when showing the image*/
+}
+.slow-load.video-placeholder {
+  background-color:black; /*Black for videos*/
+}
+
+.finished-loading {
+  opacity:1; /*Show the image/ video once loaded*/
+}
+.slow-load:hover{
+  transform: scale(1.05); /*SLightly increase the size*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /*add a subtle shadow to create depth*/
+}
+
+/*About page*/
+#text-content{
+  background-color: #7897B4;
+  
+}
+#image-contentimg{
+  object-fit: cover;
+  width:100%;
+  height: 100%;
 }
 
 /******Extra extra Large******/
@@ -252,7 +387,7 @@ h3.menu-item-title{
   }
 }
 
-/******* Extra Large devices Only *********/
+/*******OLD JUMBOTRON Extra Large devices Only *********
 @media (min-width:1200px)and (max-width:1399px){
   .container .jumbotron{
     background: url('../Kibo test images/Jumbotron 1200 (2).png') no-repeat;
@@ -264,10 +399,10 @@ h3.menu-item-title{
 @media(min-width:992px) and (max-width:1199px) {
   
   
-  .container .jumbotron{
+  /*.container .jumbotron{
     background: url('../Kibo test images/Jumbotron\ 992\ \(2\).png') no-repeat;
     height:558px;
-   }
+   }*/
    
     #custom-logo {
      max-width:100px;
@@ -278,10 +413,10 @@ h3.menu-item-title{
   }
 /*******Medium devices only*******/
 @media(min-width:768px) and (max-width:991px){
-  .container .jumbotron{
+ /* .container .jumbotron{
     background: url('../Kibo test images/Jumbotron\ 768\(2\).png') no-repeat;
     height:432px;
-  }
+  }*/
   #panel-footer{
     text-align:center;
   }
@@ -292,12 +427,12 @@ h3.menu-item-title{
 }
 /********small devices only* ******/
 @media (min-width:576px) and (max-width:767px) {
-  .container .jumbotron{
+  /*.container .jumbotron{
     background: url('../Kibo test images/Jumbotron\ 576\ \(3\).png') no-repeat;
     height:324px;
     background-size: cover;
     
-  }
+  }*/
   #panel-footer{
     text-align:center;
 
@@ -308,13 +443,13 @@ h3.menu-item-title{
 /******** extra small only*********/
 @media (min-width:0px) and (max-width:575px) {
    /**AT THIS BREAK POINT JUMBOTRON IS NOT COVERING WHOLE DIV UNTIL DIV REACHES 500PXS WIDE WHEN SQUEEZING --I need to make the image longer going down**/
-   .container .jumbotron{
+  /* .container .jumbotron{
   background: url('../Kibo test images/Jumbotron 500 (3).png') no-repeat;
   height:auto;
   width:auto;
   background-origin: content-box;
-}
-#menu-tile, #specials-tile, #map-tile{
+}*/
+#menu-tile, #specials-tile, #map-tile, #menu-tile1, #specials-tile1{
   width:100%;
   margin:2px auto 2px;}
 
@@ -364,9 +499,7 @@ h3.menu-item-title{
   width: 100%;
  }
 }
-@media (max-width: 991px) {
-  
-}
+
 
 
 
