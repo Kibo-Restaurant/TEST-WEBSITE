@@ -1,28 +1,30 @@
 //NAVBAR COLLAPSING
-document.addEventListener('DOMContentLoaded', () =>{
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('#navbarSupportedContent'); //Tutor-please find navSupported content id in bootstrap css
-//Collapse the navbar only if focus is moved outside the navbar_Tutor should break this down
-document.addEventListener('click', (event) => {
-    const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
-    if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')){
-        navbarCollapse.classList.remove('show');
-    }
-});
-    // // If you want to Collapse the navbar when the toggler loses focus
-//      navbarToggler.addEventListener('blur', () => {
+// document.addEventListener('DOMContentLoaded', () =>{
+//     const navbarToggler = document.querySelector('.navbar-toggler');
+//     const navbarCollapse = document.querySelector('#navbarSupportedContent'); //Tutor-please find navSupported content id in bootstrap css
+// //Collapse the navbar only if focus is moved outside the navbar_Tutor should break this down
+// document.addEventListener('click', (event) => {
+//     const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+//     if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')){
+//         navbarCollapse.classList.remove('show');
+//     }
+// });
+//     // // If you want to Collapse the navbar when the toggler loses focus
+// //      navbarToggler.addEventListener('blur', () => {
 
-//       if(navbarCollapse.classList.contains('show')) {
-//          navbarCollapse.classList.remove('show');
-//      }
+// //       if(navbarCollapse.classList.contains('show')) {
+// //          navbarCollapse.classList.remove('show');
+// //      }
 
-   });
+//    });
 
 
 
 
 // LOADING A JSON FILE WITH MENU DATA
 document.addEventListener('DOMContentLoaded', () =>{
+    //Show the loading gif
+    document.getElementById('loading').style.display ='block';
     fetch('../snippets/Menu-items.json')
     //.then(response => response.json ())
     .then(response => {
@@ -39,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     }) 
 
     .then(data => {
+         //Hide the loading gif
+         document.getElementById('loading').style.display = 'none';
+         //Show footer
+         document.getElementById('hide-footer').style.display ='block';
         console.log(data);
         if (!data["menu-items"]) {
             throw new Error('JSON does not contain menu-items property');
@@ -124,6 +130,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     })
     //.catch(error => console.error( 'Error loading the JSON file:', error)); --a simple way of dispaly an error message on the console
     .catch(error => {
+         //Hide the loading gif
+         document.getElementById('loading').style.display = 'none'
+         
         //Handles any errors that occur during the fetch or subsequent operations
         console.error('There was a problem with the fetch operation:', error);
         displayErrorInfo(error.message); //Display a user-friendly error message

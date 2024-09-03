@@ -1,31 +1,35 @@
-/**Aloja font to add to body tag**/
- @font-face{
+/**Aloja font to add to body tag  Tutor-Not working**/
+ /* @font-face{
   font-family:'Aloja';
      src: url('../fonts/Aloja Ligh 400.otf') format ('opentype')
           url('../fonts/Aloja-Light.woff') format ('woff'),
           url('../fonts/Aloja-Light.otf') format ('opentype');
-}        
+}         */
 
 body{
-  font-size: 16px;
-  font-family:'Aloja', sans-serif;
+   font-size: 16px;
+  /* font-family:'Aloja', sans-serif; */
   background-color:#ECE5DC;
-  /* color: #000000 ;
+  /* background-image: url('/Kibo test images/body\ background\ image\ 1.png');
+  background-clip:content-box;
+  z-index:10;
+  opacity:1; */
+   /* color: #000000 ;  */
  
-  font-family: "Oxygen", sans-serif; */
+  font-family: "Oxygen", sans-serif; 
 } 
 
  /**START HEADER OR NAV-BAR**/
 /**Navbar Color**/
-#navbar-color{
+.Nav-color{
   background-color: #ffa500;
 }
 .navbar-brand img{/*logo sizing*/
   width: 106px;
   height: 100px;
-  margin:0px 15px 10px 0px;
-    
+  margin:0px 15px 10px 0px;    
 }
+
 #restaurant-name{
   /*Restaurant name*/
  /* font-family: "Aloja", sans-serif;*/
@@ -37,26 +41,70 @@ body{
   margin-top:0px;
   margin-bottom: 10px;
   line-height:1;
-  text-decoration:none;
-  
-}/*Style not applied-Name is not clickable*/
-.container #restaurant-name a:hover {
-  text-decoration:none;
-  background-color:#E7E7E7;
+  text-decoration:none; 
 }
-#nav-list {
+
+
+#nav-list .nav-link {
+  
   margin-top:10px;
 }
-#nav-list a{
+#nav-list {
   color:#000000;
   text-align: center;
+  align-items: center;
 }
-#nav-list a:hover, a:focus{
+
+#nav-list :hover, :focus{
   background: #E7E7E7;
+  transition: all 0.3s ease;
 }
-#nav-list a span{
+#nav-list span{
   font-size:1.8 em;
 }
+.serch-container{
+  position: relative;
+  display:flex;
+  align-items: center;
+}
+.search-input{
+  width:0;
+  opacity: 0;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  position: absolute;
+  right: 30px;/* adjust as needed*/
+  top: 89%;
+  z-index:1000;
+  transform: translateY(-0%);
+}
+.search-btn{
+  background:none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.search-btn i{
+  color:#333;
+}
+.close-btn{
+  background:none;
+  border:none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display:none;
+  position:absolute;
+  right:15px;
+  top:89%; 
+}
+.search-container.active .search-input{
+  width: 200px;
+  opacity: 1;
+}
+.search-container.active  .close-btn{
+  display:block;
+}
+
 /* #phone{
   margin-top:5px;
   position:center;
@@ -67,7 +115,7 @@ body{
   padding-bottom:0;
   font-size:1.2em; */
   
-}
+
 #phone a{/*Phone number*/
   text-align:right;
   padding-bottom:0;
@@ -79,9 +127,91 @@ text-align: ri
 3ght;
 padding-right: 15px;
 }
-.containerbutton.navbar-toggler,.container.navbar-toggler-icon{
-border:1px solid #000000;
+/* Toggler button styling */
+.navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  transition: all 0.1s ease;
+}
+
+/* Collapse content */
+.navbar-collapse {
+  display: none; /* Hidden by default */
+}
+/* Toggler button transformation */
+.navbar-toggler.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 9.5px;
+}
+
+.navbar-toggler.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -9.5px;
+}
+/* Show the navbar-collapse when active */
+.navbar-collapse.show {
+  display: block; /* Show the content */
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none; /* Hidden by default */
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    flex-grow: 0; 
+    background-color: #ffa500;
+    width: 100%; /* Adjust the width as per your needs */
+    height: auto;
+    padding: 0px;
+    border: 1px solid #ECE5DC; /* Optional border for the dropdown */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;  
+    padding: 2%;
+  } 
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 5px 10px;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 2px 2px; /* Reduce padding between items */
+    margin: 0; /* Remove margin between items */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9em; /* Optional: reduce font size for a more compact look */
+  }
+}
+
+
 #search-box{/*form*/
   text-align: right;
 padding-right: 15px;
@@ -89,11 +219,310 @@ padding-right: 15px;
 #address{
   list-style-type: none;
 }
-/**END HEADER**/
+/* BACK TO TOP BUTTON */
+
+/* Style for the Back to Top button */
+#back-to-top {
+  position: fixed;
+  bottom: 50%;
+  right: 20px;
+  background-color: #007bff; /* Adjust the color as needed */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Hidden by default */
+}
+
+#back-to-top:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Show the button when scrolled down */
+#back-to-top.show {
+  opacity: 1;
+}
+/* .navbar.navbar-expand-lg {
+  position:fixed;
+} */
+
+ 
+ #navbar-properties{
+  position: fixed;
+  width:100%;
+  height:70px;
+  display:flex;
+  flex-flow: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+  font-size: 70%;
+  background-color: #ffa500;
+  z-index:1000;
+  top:0%;
+ 
+}
+#shrink-logo{
+width: -50%;
+height: -50%;
+transition: all 0.3s ease
+} 
+  
+#trip-icon{
+max-width:50px;
+max-height:50px;
+align-items: center;
+position: relative;
+}
+#trip-advisor-1{/* I will switch this id with others in oder to set a different backgrounds using js*/
+  background: url("../Kibo test images/Sunset\ with\ trip\ advisor.jpeg") no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-size: 100% auto;
+  background-clip: border-box;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+#trip-advisor-2{
+  background: url("../Kibo test images/beach\ background\ 1.jpg") no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-size: 100% auto;
+  background-clip: border-box;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+#trip-advisor-3{
+  background: url("../Kibo test images/beach\ background\ 2.jpg") no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-size: 100% auto;
+  background-clip: border-box;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+#heartbeat-button {
+  background-color: transparent;
+  border: none;
+  /* border-color: #ECE5DC; *
+  color:#25d366;/** Tutor- Understand whatsapp button for 
+  trip advisor icon manipulation-PUT A GREEN FILL AROUND JPG, PNG OR <i> fa fa<i> to get tripadvisor better icon***/
+  /* border-radius:50%; */
+  /* border: 2px solid black; */
+  cursor: hand;
+  outline: none;
+  padding: 0;
+  animation: heartbeat 3s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1px;
+  top:17%;
+}
+/* #trip-reviews{/*The background and positioning of all elements i.e carousel container and text on top of these slide*
+  background-color: rgb(130, 153, 173);
+  border: 4px solid #ECE5DC;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  top:-25%;
+  margin-top:1px;
+  width: 80%;
+  height: auto;
+} */
+
+@keyframes heartbeat {
+  0% {
+      transform: scale(1);
+  }
+  25% {
+      transform: scale(1.1);
+  }
+  50% {
+      transform: scale(1);
+  }
+  75% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+/*Start of Carosel */
+.carousel-advisor{
+  background-color: rgb(130, 153, 173);
+  border: 4px solid #ECE5DC;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  top:-180px;
+  position:relative;
+  overflow: hidden;
+  margin: auto;
+  height: 200px;
+  width:90%;
+  align-items:stretch;
+  justify-content:center;
+  /* top:-2%; This is an Adjustable */
+}
+.carousel-advisor-container{
+  display:flex;
+  transition: transform 0.5s ease-in-out;
+  height:100%;
+  width: 100%; /* Ensure the container takes full width */
+  /* justify-content:space-between; */
+}
+.carousel-advisor-slide{
+  min-width:100%;
+  box-sizing: border-box;
+}
+.carousel-advisor-slide a {
+  text-decoration: none; /* Remove underline from the anchor tag */
+}
+.carousel-advisor-slide h4{
+  text-decoration: none;
+  text-align: center;
+  /* text-shadow:#ff0000; */
+  color:#000000;
+  cursor: pointer;
+  /* color: inherit; Inherits the color of the parent element */
+  /* Or you can specify a color directly */
+  /* color: black; */
+}
+.carousel-advisor-slide a h5{
+  text-decoration: none;
+  text-align: center;
+  text-shadow:#e4caa8;
+  color:#000000;
+}
+.carousel-advisor-slide p{
+  margin: 10px 20px; 
+  /* Add some margin around the text to create space */
+  /* line-height: 1.6;  */
+  /* Adjust the line height for better readability */
+  text-align: center;
+   /* Ensure the text is centered */
+  /* font-size: 1rem;  */
+  /* Adjust font size as needed */
+}
+.prev-advisor, .next-advisor{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background-color:rgba(0,0,0,0.5);
+  color: #e4caa8;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index:10;
+ }
+.prev-advisor{
+  left:1px;
+}
+.next-advisor{
+  right: 1px;
+}
+/* end of trip advisor CAROUSEL*/
+/*EVERYWHERE */
+/* whatsapp dancing Icon*/
+.whatsapp-container{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  align-items:center;
+  z-index: 1000;
+  animation: float 2s infinite ease-in-out;
+}
+
+.whatsapp-icon{
+  background-color: #25d366; /* Green background */
+  color:#25d366; /* Green icon color --before it was white */
+  border-radius:50%; /* Round shape */
+  padding: 20px; /* Increased padding to make it bigger */
+  font-size: 30px; /* Increased font size for larger icon */
+  position:relative;
+  margin-right: 10px;
+}
+.whatsapp-icon i{
+  position: relative;
+  z-index: 2;
+}
+.whatsapp-icon::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:white;
+  border-radius:50%;
+  z-index: 1;
+  padding: 8px; /* Adjusted padding inside the white circle */
+}
+
+.whatsapp-text{
+  color:#25d366;
+  font-size: 16px;
+  font-weight: bold;
+  animation: bounce 2s infinite;
+}
+@keyframes float{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce{
+  0%, 100%{
+    transform: translate(0);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+}
+.whatsapp-text .emoji{
+  font-size: 40px; /* Increased size for the waving hand emoji**/
+  vertical-align: middle; /*ALigns the emoji with the text*/
+}
+
+#hide-footer{
+display: none;
+}
+
+
+
+
 
 /**Footer**/
 .call-us span:hover, a:focus{
   background: #557C3E;
+  
   }
 
 
@@ -157,7 +586,6 @@ line-height: 2;
   overflow: hidden;
   margin: auto;
   height: 400px; /*This is an Adjustable*/
-
 }
 .carousel-container{
   display:flex;
@@ -193,6 +621,11 @@ line-height: 2;
   right: 10px;
 }
 
+
+
+
+
+
 #menu-tile,#specials-tile, #menu-tile1, #specials-tile1, #services-tile, #map-tile {
   height: 250px;
   width: 100%;
@@ -200,29 +633,32 @@ line-height: 2;
   margin-left:auto;
   margin-right:auto;
   position: relative;
-  border: 2px solid #000000;
+  border: 2px solid #8b6a2d;
   overflow:hidden;
 }
 #menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover{
-  box-shadow:0 1px 5px 1px #cccccc;
+  box-shadow:0 1px 5px 1px #504a4a;
+  transition: all 0.3s ease;
 }
 #menu-tile{
   background: url('../Kibo test images/Kibo Menu photo (476).png') no-repeat;
   background-position:center;
+  background-size: cover;
 }
 #specials-tile{
   background: url('../Kibo test images/Kibo specials photo (476).png') no-repeat;
   background-position:center;
+  background-size: cover;
 }
 #menu-tile1{
-  background: url('../Kibo test images/Kibo Menu photo 2(476).jpg') no-repeat;
+  background: url('../Kibo test images/Kibo\ Menu\ photo\ 3\(476\)\ \(1\).png') no-repeat;
   background-position:center;
-
+  background-size: cover;
 }
 #specials-tile1{
   background: url('../Kibo test images/Kibo Menu photo1(476).png') no-repeat;
   background-position:center;
-
+  background-size: cover;
 }
 
 #services-tile span, #map-tile span{
@@ -236,6 +672,11 @@ line-height: 2;
   background-color: #000;
   color:#fff;
   opacity:.8;
+}
+.icon-images{
+  max-width:80px;
+  max-height:80px;
+ align-content: center;
 }
 
 
@@ -259,6 +700,7 @@ line-height: 2;
   color: #ff0000;/**if direct In HTML Main doc= style="color:red; display:none;*/
   font-weight: bold;
 }
+
 
 
 /** END OF HOME PAGE**/
@@ -285,6 +727,7 @@ line-height: 2;
 }
 .category-tile:hover {
   box-shadow:0 1px 5px 1px #cccccc;
+  transition: all 0.3s ease;
 }
 #menu-categories-title + div{
   margin-bottom: 50px;
@@ -344,6 +787,37 @@ padding-right:30px;
     padding: 5px;
   }  
 }
+/*Carousel  videos*/
+
+.video-carousel-wrapper{
+  display: flex;
+  overflow:hidden;
+  width:100%;
+  height: auto;
+  position: relative;
+}
+.carousel-video{
+  width:100%;
+  height:auto;
+  display:block; 
+  z-index: 1; /*It ensures that the video is behinf the overlay*/
+}
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  width:100%;
+  height:100%;  /*These specifications gave me a sticking out overlay -understand them*/
+  z-index: 2; /*overlay on top of the video*/
+  background: rgba(107, 206, 206, 0.5); /*semi transparent white, like a veil
+  rgb is just another way of choosing the right color combination */
+  pointer-events: none; /* Allows clicks to pass through the overlay*/
+  backdrop-filter: blur(0px); /*Optional : Adds a bur effect to the veil*/
+}
+
+
 /**End of carousel**/
 
 /*SLow Loading*/
@@ -368,47 +842,82 @@ padding-right:30px;
 }
 
 /*About page*/
+#text-content p{
+  /* background-color: #7897B4; */
+  padding: 20px;
+  box-sizing:border-box;
+  width:100%;
+  height: 100%;
+  /* background-clip: content-box; */
+}
 #text-content{
   background-color: #7897B4;
-  
+  background-clip: content-box;
 }
-#image-contentimg{
-  object-fit: cover;
+#image-content img{
+  object-fit:cover;
   width:100%;
   height: 100%;
 }
-
-/******Extra extra Large******/
-@media(min-width:1400px){
-  .container .jumbotron{
-    background: url('../Kibo test images/Jumbotron 1400 (1).png') no-repeat;
-    height:788px;
-
-  }
+/* .floating-test img{
+  /*Tutor -FYI This is combination of box shadow, transform and perspective and css animation* all techniques*8
+  Please check new css tricks to ensure indepth understanding***
+  display: block;
+  margin:;
+  width: ;
+  perspective: 1000px;
+  transform: rotateX(5deg) rotateY(5deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+} ****
+.floating-test img:hover{
+  transform: translateY(-10px) rotateX(0deg) rotateY(0deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}*/
+.no-negative-margin{
+  margin-left: 0;
+  margin-right:0;
 }
 
 /*******OLD JUMBOTRON Extra Large devices Only *********
+******Extra extra Large******/
+@media(min-width:1400px){
+  #custom-logo{
+    max-width:100px;
+    max-height:100px;
+    margin:0px 10px 10px 0px;
+  }
+  #shrink-logo{
+    max-width:60px;
+    max-height: 60px;
+    margin:0px 10px 10px 0px;
+    transition: all 0.3s ease;
+  }
+}
+
+
 @media (min-width:1200px)and (max-width:1399px){
-  .container .jumbotron{
-    background: url('../Kibo test images/Jumbotron 1200 (2).png') no-repeat;
-  height:675px;
+  #custom-logo{
+    max-width:90px;
+    max-height:90px;
+  }
+  #shrink-logo{
+    max-width:55px;
+    max-height:55px;
   }
 
 }
 /*******Large devices only**********/
 @media(min-width:992px) and (max-width:1199px) {
-  
-  
-  /*.container .jumbotron{
-    background: url('../Kibo test images/Jumbotron\ 992\ \(2\).png') no-repeat;
-    height:558px;
-   }*/
-   
     #custom-logo {
-     max-width:100px;
-     max-height:100px;
-     margin:0px 15px 10px 0px;
+     max-width:80px;
+     max-height:80px;
    }
+   #shrink-logo{
+    max-width:45px;
+    max-height: 45px;
+  }
 
   }
 /*******Medium devices only*******/
@@ -417,6 +926,14 @@ padding-right:30px;
     background: url('../Kibo test images/Jumbotron\ 768\(2\).png') no-repeat;
     height:432px;
   }*/
+  #custom-logo {
+    max-width:70px;
+    max-height:70px; 
+  }
+  #shrink-logo{
+    max-width:40px;
+    max-height: 40px;
+  }
   #panel-footer{
     text-align:center;
   }
@@ -433,6 +950,14 @@ padding-right:30px;
     background-size: cover;
     
   }*/
+  #custom-logo {
+    max-width:60px;
+    max-height:60px;
+  }
+  #shrink-logo{
+    max-width:35px;
+    max-height: 35px;
+  }
   #panel-footer{
     text-align:center;
 
@@ -442,16 +967,18 @@ padding-right:30px;
 
 /******** extra small only*********/
 @media (min-width:0px) and (max-width:575px) {
-   /**AT THIS BREAK POINT JUMBOTRON IS NOT COVERING WHOLE DIV UNTIL DIV REACHES 500PXS WIDE WHEN SQUEEZING --I need to make the image longer going down**/
-  /* .container .jumbotron{
-  background: url('../Kibo test images/Jumbotron 500 (3).png') no-repeat;
-  height:auto;
-  width:auto;
-  background-origin: content-box;
-}*/
-#menu-tile, #specials-tile, #map-tile, #menu-tile1, #specials-tile1{
+  #custom-logo {
+    max-width:50px;
+    max-height:50px; 
+  }
+  #shrink-logo{
+    max-width:25px;
+    max-height: 25px;
+  }
+  #menu-tile, #specials-tile, #map-tile, #menu-tile1, #specials-tile1{
   width:100%;
-  margin:2px auto 2px;}
+  margin:2px auto 2px;
+  }
 
   #panel-footer{
     text-align:center;
@@ -459,38 +986,44 @@ padding-right:30px;
   .jumbotron-text{
     font: size 0.5em;
     align-content: center;
-}
-.menu-item-photo{
+   }
+  .menu-item-photo{
   margin-right: auto;
-}
-.menu-item-tile .menu-item-price{
+  }
+ .menu-item-tile .menu-item-price{
   text-align:center;
-}
-.menu-item-description{
+  }
+ .menu-item-description{
   text-align:center;
-}
+  }
 }
 
 
-@media screen and (max-width:767){
+/* @media screen and (max-width:767){
 /****Restaurant name****/
-.container{
+/*.container{
   padding-top:10px;
   height:80px;
-}
+} */
+/* @media screen and (max-width:768px){
+  #text-content p{
+  width:fit-content;
+  }
+} */
+
 .container #restaurant-name{
   padding-top:10px;
   font-size:5vw; /* 1 vw =1% of viewport width*/
 }
-}
+
 
 /****Restaurant name breaks into 2- lOgo hidden for space AT WIDTH 994****/
  @media screen and (max-width: 994px) {
-   #custom-logo {
+   /* #custom-logo {
     display:none;
-  }
+  } */
  #restaurant-name{
-    display: flexbox;
+    display:flexbox;
  } 
   }
   @media (max-width:479px) {
@@ -499,8 +1032,6 @@ padding-right:30px;
   width: 100%;
  }
 }
-
-
 
 
  

@@ -1,11 +1,11 @@
 
-
-document.addEventListener('DOMContentLoaded', () => {
+//THIS IS SPECIFICALLY FOR THE HOME PAGE CAROUSEL
+function initializeCarousel(){
 //DYNAMICALLY SETTING THE CAROUSEL SLIDE SHOW
 let presentSlide = 0; //keeps track of the current slide index (first slide which is 0)
 const slides = document.querySelectorAll('.carousel-slide'); //selection of all slides under the class carousel slide (the list of slides is store in the const all slides)
 const allSlides = slides.length; // const allslides store the number of slide-here 6 slides
-console.log(allSlides-1);
+console.log(`Counting slides to confirm: ${allSlides-1}`);
 function showSlide(index) {// index is the parameterhere
     if(index >= allSlides) {//if index is over the last slide
         presentSlide = 0; //Wrap around to/ go back to the first slide
@@ -52,7 +52,7 @@ function activateButtons() {
 //initialize the carousel
  showSlide(presentSlide); // this displays the first slide index 0
  autoSlideOnce();
-});
+}
 
 
 // function autoSlide () {

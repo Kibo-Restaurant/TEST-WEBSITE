@@ -1,0 +1,80 @@
+{"events-items": [
+    {
+      "rowId": "row1",
+      "columns": [
+        {
+          "columnId": "col1",
+          "media": {
+            "type": "image",
+            "src": "./Kibo test images/wedding occasion.jpeg",
+            "alt": "wedding occasion"
+          },
+          "text": [
+            "Anyone can say they love you,<br>bring you joy, or promise the stars.<br>But I want to be the one<br>who makes you wake up smiling,<br>knowing you're truly loved.",
+            "At Kibo Restaurant by the ocean's edge,<br>under the tropical sun’s warm embrace,<br>we'll begin our journey together,<br>surrounded by family, friends, and the sea’s sweet melody,<br>as we step into forever.<br><strong><i>Congratulations for finding your perfect match! </i></strong>"
+          ]
+        },
+        {
+          "columnId": "col2",
+          "media": {
+            "type": "image",
+            "src": "./Kibo test images/birthday cake.jpeg",
+            "alt": "birthday cake"
+          },
+          "text": [
+            "Happy Birthday! May you age gracefully and enjoy every moment. Come celebrate with us and make this day special with your family and friends. We’ll make sure your birthday is just as you wish, turning your celebration into a truly memorable experience."
+          ]
+        },
+        {
+          "columnId": "col3",
+          "media": {
+            "type": "image",
+            "src": "./Kibo test images/party black cheers.jpeg",
+            "alt": "black/white cheers"
+          },
+          "text": [
+            "Cheers to celebrating life’s special moments! Come join us for a great time and make unforgettable memories. Whether it's a big event or a cozy gathering, we're here to ensure you have an amazing experience.",
+            "Party types:<ul><li>&#9654;End-of-Year Bash</li><li>&#9654;Family Celebration</li><li>&#9654;Reunion Gathering</li><li>&#9654;Anniversary Celebration</li><li>&#9654;Holiday Party</li><li>&#9654;Any Special Occasion</li></ul>"
+          ]
+        }
+      ]
+    },
+    {
+      "rowId": "row2",
+      "video": {
+        "src": "./Kibo test videos/Ocean view in 5 seconds.mp4",
+        "overlay": true
+      }
+    },
+    {
+      "rowId": "row3",
+      "images": [
+        "./Kibo test images/kibo gallery 1.1.jpeg",
+        "./Kibo test images/kibo gallery 2.jpeg",
+        "./Kibo test images/kibo gallery 3.jpeg",
+        "./Kibo test images/kibo gallery 4.0.jpeg",
+        "./Kibo test images/kibo gallery 1.jpeg",
+        "./Kibo test images/kibo gallery 1.jpeg",
+        "./Kibo test images/kibo gallery 6.jpeg",
+        "./Kibo test images/kibo gallery 4.jpeg",
+        "./Kibo test images/kibo gallery 1.jpeg",
+        "./Kibo test images/kibo gallery 7.jpeg",
+        "./Kibo test images/kibo gallery 1.1.jpeg"
+      ]
+    },
+    {
+      "rowId": "row4",
+      "whatsapp": {
+        "link": "https://wa.me/254715408584",
+        "iconClass": "bi bi-whatsapp",
+        "text": "Book your space!<span role=\"img\" aria-label=\"hand wave\" class=\"emoji\">👋</span>"
+      }
+    },
+    {
+      "rowId": "row5",
+      "backToTopButton": {
+        "text": "&#8679;"
+      }
+    }
+  ]
+}

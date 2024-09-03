@@ -1,19 +1,18 @@
 <!--External-content.html - Should be loaded from an external database -->
     <!---MAKE A  JUMBOTRON WITH A 3 PICS SLIDE SHOW-->
-    <div id="content" >
-      <div class="carousel">
+  <div id="home-snippet-content" ><!--start of home snippet content-->
+      <div class="carousel"><!--start of carousel-->
         <div class="carousel-container">
           <div class=" carousel-slide"><img src="./Kibo test images/Kibo Jumbo Image 0.jpeg" alt="Image index 0"></div> <!--Tutor convert to png-->
           <div class=" carousel-slide"><img src="./Kibo test images/Kibo Jumbo Image 1.jpeg" alt="Image index 1"></div> <!--Tutor convert to png-->
           <div class=" carousel-slide"><img src="./Kibo test images/Kibo Jumbo Image 2.jpeg" alt="Image index 2"></div> <!--Tutor convert to png-->
           <div class=" carousel-slide"><img src="./Kibo test images/Kibo Jumbo Image 3.jpeg" alt="Image index 3"></div> <!--Tutor convert to png-->
           <div class=" carousel-slide"><img src="./Kibo test images/Kibo Jumbo Image 4.jpeg" alt="Image index 4"></div> <!--Tutor convert to png-->
-          <div class=" carousel-slide"> <img src="./Kibo test images/Kibo Jumbo image 5.jpeg" alt ="Image index 5"></div>
+          <div class=" carousel-slide"> <img src="./Kibo test images/Kibo Jumbo image 5.jpeg" alt ="Image index 5"></div>  <!--Tutor convert to png-->
         </div>
         <button class="prev">&#10094;</button>
         <button class="next"> &#10095;</button>
-      </div>
-    <!--End of carosel-->
+      </div><!--End of carosel-->
     <!--PREVIOUS JUMBOTRONdiv id="main content" class="container mt-3">  <div class="jumbotron d-flex justify-md-content-center align-items-center">
         <img src="../Kibo test images/Jumbotron 500 (3).png" alt="picture of restaurant yard" class="img-fluid d-block d-sm-none"> 
       </div>
@@ -33,8 +32,13 @@
           <div class="col-md-4 col-sm-6 col-xs-12"> 
             <div id="services-tile">
               <ul type="none">
-                <li>Beach Bar and Grill</li>
-                <li>Relaxing beds by the Beach </li>
+                <li class="text-decoration-underline">&#9654; Beach Bar and Grill</li>
+                <img class="img-fluid icon-images p-2" src="../Kibo test images/BEACH BAR PHOTO.jpg" alt="beach-bar-icon">
+                <img class="img-fluid icon-images p-2" src="../Kibo test images/SEA FOOD ICON.jpg" alt="sea-food-icon">
+                
+
+                <li class="text-decoration-underline">&#9654;Relaxing beds by the Beach </li>
+                <img class="img-fluid icon-images" src="../Kibo test images/BEACH BEDS PHOTO.jpg" alt="beach-beds-icon">
                 <li></li>
               </ul>
                <span>Our services</span>
@@ -57,7 +61,7 @@
             </div></a>
         </div>
       </div> <!--END OF HOME TILES-->
-      <div class="kiboquick-view">
+      <div class=" row kiboquick-view">
         <h3>WELCOME TO ECSTACY</h3>
         <h4>HAKUNA MATATA! </h4>
         <p>Welcome to Kibo Restaurant: Your Seafood Sanctuary
@@ -86,4 +90,61 @@
          </p>
 
       </div>
-    </div>   <!--END OF MAIN CONTENT-->
+  <div class="row mb-3 switch-background" id="trip-advisor-1"><!--Start of trip advisor main content-->
+
+        <button class="" id="heartbeat-button"><a href="https://www.tripadvisor.com/Restaurant_Review-g661279-d27419414-Reviews-Kibo_Restaurant-Watamu_Coast_Province.html" target="blank" class="trip-advisor-icon">
+          <img id="trip-icon" class="img-fluid " src="/Kibo test images/Trip advisor.png" alt="trip-advisor-icon">
+        </button>
+          
+     
+
+            <div class="carousel-advisor"> <!--start of wrapper ( wrapping container & Previous next buttons)-->
+
+              <div class="carousel-advisor-container"><!--start of container-->
+
+                <div class="carousel-advisor-slide"> <h4 class="">"Friendly service, fresh local flavors."</h4><br>
+                  <a href="https://www.tripadvisor.com/Profile/elisafY9506LY?fid=0ab820e2-ab06-44c7-898b-b1acd532884d" target="blank">
+                    <h5>Elisa F</h5></a> 
+                    <p>Kibo Restaurant in Watamu is a great place for a relaxed meal. 
+                      A Kenyan friend recommended it to us, and we had lunch there during our stay. 
+                      The staff is very friendly, and they serve traditional local grilled dishes. 
+                      The food takes a bit of time to prepare, but that's because it's made fresh on the spot. 
+                      If you don't mind waiting, you'll get a delicious meal.
+                    </p>
+                </div> <!--End of 1st carousel-advisor slide -->
+                
+                <div class="carousel-advisor-slide"> <h4 class="">"Beachfront dining with exceptional grilled fish."</h4>
+                    <a href="https://www.tripadvisor.com/Profile/filippoo574?fid=deb2f729-9759-43e7-8ab2-4f4f1aa80bf5" target="blank">
+                      <h5>Filippo O</h5></a> 
+                      <p>A beachfront restaurant with views of Watamu’s 7th island, offering exceptional grilled fish and truly friendly, helpful staff.
+                      </p>
+                </div> <!--End of 2nd carousel-advisor slide -->
+                  
+                <div class="carousel-advisor-slide"> <h4 class="">"Stunning beach, tasty dishes, excellent service."</h4>
+                      <a href="https://www.tripadvisor.com/Profile/gamberoxx?fid=259e969a-2524-43eb-b007-dc9d78fd82ae" target="blank">
+                        <h5>gamberoxx</h5></a> 
+                        <p>Located on Fortamu's stunning white beach, this spot offers beautiful views of the northernmost island in the bay. 
+                          The restaurant serves delicious meat and vegetarian dishes, offering great value for money.
+                           The service is attentive, and Kibo speaks excellent Italian. Highly recommended.
+                        </p>
+                </div> <!--End of 3rd carousel-advisor slide-->
+              </div> 
+              <button class="prev-advisor">&#10094;</button>
+             <button class="next-advisor"> &#10095;</button>
+                </div><!--end of wrapper-->
+            
+      
+     
+    </div><!---End of trip advisor row contents--> <!---end of trip advisor div the one with 3 or more backgrounds changing-->
+
+
+    <div class="whatsapp-container">
+      <a href="https://wa.me/254715408584" target="_blank" class="whatsapp-icon">
+      <i class="bi bi-whatsapp"></i>
+      </a>
+      <span class="whatsapp-text">Talk to us<span role="img" aria-label="hand wave" class="emoji">&#128075;</span> </span><!--html entity (&#number) can be replaced with a waving hand direct emoji(👋)-->
+    </div>
+    
+    
+    <!--END OF MAIN CONTENT-->
+    
