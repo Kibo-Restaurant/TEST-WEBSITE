@@ -19,10 +19,8 @@
 //    });
 
 
-
-
-// LOADING A JSON FILE WITH MENU DATA
-document.addEventListener('DOMContentLoaded', () =>{
+function loadExternaljsonMenu() {
+    return new Promise((resolve, reject) => {
     //Show the loading gif
     document.getElementById('loading').style.display ='block';
     fetch('../snippets/Menu-items.json')
@@ -81,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             img.height = 150;
             // img.src = menu.tileImage; -before set Attribute-data-src
             img.setAttribute('data-src', menu.tileImage); //Set the actual image source in data src
+            img.src = '/Kibo test images/16-9 Light grey placeholder.png';
             img.alt = menu.tileTitle;
             console.log(menu.tileTitle);
             //Append elements to the innerDiv
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               }
              //Append the most most Outer div to the row
              row.appendChild(mostMostOuterDiv);
-              
+             resolve(); // Resolve the promise when content is successfully loaded   
         }
     })
     //.catch(error => console.error( 'Error loading the JSON file:', error)); --a simple way of dispaly an error message on the console
@@ -136,12 +135,32 @@ document.addEventListener('DOMContentLoaded', () =>{
         //Handles any errors that occur during the fetch or subsequent operations
         console.error('There was a problem with the fetch operation:', error);
         displayErrorInfo(error.message); //Display a user-friendly error message
+        reject(error); // Reject the promise if there's an error
     })
     //Function to display an error message to the user
         function displayErrorInfo(message) {
        const errorInfoELement = document.getElementById('error-info');
        errorInfoELement.textContent =`An error occured while loading the content: ${message}`;
        errorInfoELement.style.display ='block'; //Make the error message visible
+}  
+    });
 }
-    
+
+// LOADING A JSON FILE WITH MENU DATA
+//WAIT UNTIL FETCHING OPERATION IS COMPLETE THEN RUN THIS CODE Load the content when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () =>{
+    loadExternaljsonMenu()
+    .then(() => {
+         //Show footer
+         document.getElementById('hide-footer').style.display ='block';
+        // Initialize carousel and navbar scripts only after content is fully loaded
+        initializeNavbar();
+        slowLoadMedia();
+    })
+    .catch(error => {
+        console.error('Error loading content:', error);
+    }); 
+    // Call slowLoadMedia initially and set an event listener for scroll and resize
+    window.addEventListener('scroll', slowLoadMedia);
+    window.addEventListener('resize', slowLoadMedia);
 });
