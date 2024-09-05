@@ -291,7 +291,7 @@ align-items: center;
 position: relative;
 }
 #trip-advisor-1{/* I will switch this id with others in oder to set a different backgrounds using js*/
-  background: url("../Kibo test images/Sunset\ with\ trip\ advisor.jpeg") no-repeat;
+  background: url("Kibo test images/Sunset with trip advisor.jpeg") no-repeat;
   background-position:center;
   background-size: cover;
   background-size: 100% auto;
@@ -305,7 +305,7 @@ position: relative;
   margin-bottom: 0;
 }
 #trip-advisor-2{
-  background: url("../Kibo test images/beach\ background\ 1\ \(1\).jpg") no-repeat;
+  background: url("Kibo test images/beach background 1 (1).jpg") no-repeat;
   background-position:center;
   background-size: cover;
   background-size: 100% auto;
@@ -317,7 +317,7 @@ position: relative;
   position:relative;
 }
 #trip-advisor-3{
-  background: url("../Kibo test images/beach background 2 (1).jpg") no-repeat;
+  background: url("Kibo test images/beach background 2 (1).jpg") no-repeat;
   background-position:center;
   background-size: cover;
   background-size: 100% auto;
@@ -650,22 +650,22 @@ line-height: 2;
   transition: all 0.3s ease;
 }
 #menu-tile{
-  background: url('../Kibo test images/Kibo Menu photo (476).png') no-repeat;
+  background: url('Kibo test images/Kibo Menu photo (476).png') no-repeat;
   background-position:center;
   background-size: cover;
 }
 #specials-tile{
-  background: url('../Kibo test images/Kibo specials photo (476).png') no-repeat;
+  background: url('Kibo test images/Kibo specials photo (476).png') no-repeat;
   background-position:center;
   background-size: cover;
 }
 #menu-tile1{
-  background: url('../Kibo test images/Kibo\ Menu\ photo\ 3\(476\)\ \(1\).png') no-repeat;
+  background: url('Kibo test images/Kibo Menu photo 3(476) (1).png') no-repeat;
   background-position:center;
   background-size: cover;
 }
 #specials-tile1{
-  background: url('../Kibo test images/Kibo Menu photo1(476).png') no-repeat;
+  background: url('Kibo test images/Kibo Menu photo1(476).png') no-repeat;
   background-position:center;
   background-size: cover;
 }
@@ -971,7 +971,7 @@ padding-right:30px;
 /*******Medium devices only*******/
 @media(min-width:768px) and (max-width:991px){
  /* .container .jumbotron{
-    background: url('../Kibo test images/Jumbotron\ 768\(2\).png') no-repeat;
+    background: url('/Kibo test images/Jumbotron\ 768\(2\).png') no-repeat;
     height:432px;
   }*/
   #custom-logo {
