@@ -124,8 +124,9 @@ function loadExternaljsonMenu() {
               }
              //Append the most most Outer div to the row
              row.appendChild(mostMostOuterDiv);
-             resolve(); // Resolve the promise when content is successfully loaded   
+              
         }
+        resolve(); // Resolve after the loop has completed resolve(); // Resolve the promise when content is successfully loaded  
     })
     //.catch(error => console.error( 'Error loading the JSON file:', error)); --a simple way of dispaly an error message on the console
     .catch(error => {
