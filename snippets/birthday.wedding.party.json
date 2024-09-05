@@ -6,7 +6,7 @@
           "columnId": "col1",
           "media": {
             "type": "image",
-            "src": "./Kibo test images/wedding occasion.jpeg",
+            "src": "Kibo test images/wedding occasion.jpeg",
             "alt": "wedding occasion"
           },
           "text": [
@@ -18,7 +18,7 @@
           "columnId": "col2",
           "media": {
             "type": "image",
-            "src": "./Kibo test images/birthday cake.jpeg",
+            "src": "Kibo test images/birthday cake.jpeg",
             "alt": "birthday cake"
           },
           "text": [
@@ -29,7 +29,7 @@
           "columnId": "col3",
           "media": {
             "type": "image",
-            "src": "./Kibo test images/party black cheers.jpeg",
+            "src": "Kibo test images/party black cheers.jpeg",
             "alt": "black/white cheers"
           },
           "text": [
@@ -42,25 +42,25 @@
     {
       "rowId": "row2",
       "video": {
-        "src": "./Kibo test videos/Ocean view in 5 seconds.mp4",
+        "src": "Kibo test videos/Ocean view in 5 seconds.mp4",
         "overlay": true
       }
     },
     {
       "rowId": "row3",
       "images": [
-        "./Kibo test images/kibo gallery 1.1.jpeg",
-        "./Kibo test images/kibo gallery 2.jpeg",
-        "./Kibo test images/kibo gallery 3.jpeg",
-        "./Kibo test images/kibo gallery 4.0.jpeg",
-        "./Kibo test images/kibo gallery 1.jpeg",
-        "./Kibo test images/kibo gallery10.jpeg",
-        "./Kibo test images/kibo gallery 6.jpeg",
-        "./Kibo test images/kibo gallery 4.jpeg",
-        "./Kibo test images/kibo gallery 1.jpeg",
-        "./Kibo test images/kibo gallery 7.jpeg",
-        "./Kibo test images/kibo gallery8.jpeg",
-        "./Kibo test images/kibo gallery9.jpeg"
+        "Kibo test images/kibo gallery 1.1.jpeg",
+        "Kibo test images/kibo gallery 2.jpeg",
+        "Kibo test images/kibo gallery 3.jpeg",
+        "Kibo test images/kibo gallery 4.0.jpeg",
+        "Kibo test images/kibo gallery 1.jpeg",
+        "Kibo test images/kibo gallery10.jpeg",
+        "Kibo test images/kibo gallery 6.jpeg",
+        "Kibo test images/kibo gallery 4.jpeg",
+        "Kibo test images/kibo gallery 1.jpeg",
+        "Kibo test images/kibo gallery 7.jpeg",
+        "Kibo test images/kibo gallery8.jpeg",
+        "Kibo test images/kibo gallery9.jpeg"
         
       ]
     },

@@ -3,62 +3,62 @@
  "menu-items":[
    {
     "tileNumber":"K01",
-    "tileImage":"./Kibo test images/Big grilled octopus with fries.png",
+    "tileImage":"Kibo test images/Big grilled octopus with fries.png",
     "tileTitle": "Grilled octopus with fries",
      "tileDescription":"<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
      "horizontalBreak": true
     },
     {
     "tileNumber":"K02",
-    "tileImage":"./Kibo test images/Big grilled lobster with fries.png",
+    "tileImage":"Kibo test images/Big grilled lobster with fries.png",
     "tileTitle": "Grilled lobster with fries",
      "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
      "horizontalBreak": true
     },
    {"tileNumber":"K03",
-   "tileImage":"./Kibo test images/Big Octopus salad.png",
+   "tileImage":"Kibo test images/Big Octopus salad.png",
    "tileTitle": "Octopus Salad",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K04",
-   "tileImage":"./Kibo test images/Big squid with rice.png",
+   "tileImage":"Kibo test images/Big squid with rice.png",
    "tileTitle": "Grilled squid with rice",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K05",
-   "tileImage":"./Kibo test images/Big lobster with vegetables.png",
+   "tileImage":"Kibo test images/Big lobster with vegetables.png",
    "tileTitle": "Grilled lobster with vegetables",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K06",
-   "tileImage":"./Kibo test images/Lunch Image.png",
+   "tileImage":"Kibo test images/Lunch Image.png",
    "tileTitle": "Rice with octopus coconut soup",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K06",
-   "tileImage":"./Kibo test images/Lunch Image.png",
+   "tileImage":"Kibo test images/Lunch Image.png",
    "tileTitle": "Rice with octopus coconut soup",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K06",
-   "tileImage":"./Kibo test images/Lunch Image.png",
+   "tileImage":"Kibo test images/Lunch Image.png",
    "tileTitle": "Rice with octopus coconut soup",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K06",
-   "tileImage":"./Kibo test images/Lunch Image.png",
+   "tileImage":"Kibo test images/Lunch Image.png",
    "tileTitle": "Rice with octopus coconut soup",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true
    },
    {"tileNumber":"K06",
-   "tileImage":"./Kibo test images/Lunch Image.png",
+   "tileImage":"Kibo test images/Lunch Image.png",
    "tileTitle": "Rice with octopus coconut soup",
    "tileDescription": "<p>Fresh Octopus from the ocean. Marinated and grilled to liking. Served with beautifully chopped fries.</p>",
    "horizontalBreak": true

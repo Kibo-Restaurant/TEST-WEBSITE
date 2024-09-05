@@ -47,7 +47,7 @@ function displayErrorMessage(message) {
 
 //Load the content when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    loadExternalContent('../snippets/Home-snippet.html', 'content-home')
+    loadExternalContent('snippets/Home-snippet.html', 'content-home')
     .then(() => {
          //Show footer
          document.getElementById('hide-footer').style.display ='block';
