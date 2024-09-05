@@ -49,7 +49,7 @@ function loadExternaljsonBirthday() {
                   //Example-to ensure slowloading works
                    // img.src = menu.tileImage; -before set Attribute-data-src--at first it src was set like this
                   //img.setAttribute('data-src', menu.tileImage); //Set the actual image source in data src
-                  img.src = 'Kibo test images/736 light grey placeholder.png';
+                  img.src = 'Kibo-test-images/736-light-grey-placeholder.png';
                   img.setAttribute('data-src', column.media.src);
                   img.alt = column.media.alt;
                   imgRow.appendChild(img);
@@ -97,7 +97,7 @@ function loadExternaljsonBirthday() {
                   const img = document.createElement('img');
                   img.classList.add('img-fluid', 'slow-load');
                   img.id = ('events-images');
-                  img.src = 'Kibo test images/16-9 Light grey placeholder.png';
+                  img.src = 'Kibo-test-images/16-9-Light-grey-placeholder.png';
                   img.setAttribute('data-src', eventItem.images[j]);
                   img.alt = "star fish";
                   colDiv.appendChild(img);
