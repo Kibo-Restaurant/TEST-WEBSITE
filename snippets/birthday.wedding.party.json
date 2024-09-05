@@ -54,24 +54,19 @@
         "./Kibo test images/kibo gallery 3.jpeg",
         "./Kibo test images/kibo gallery 4.0.jpeg",
         "./Kibo test images/kibo gallery 1.jpeg",
-        "./Kibo test images/kibo gallery 1.jpeg",
+        "./Kibo test images/kibo gallery10.jpeg",
         "./Kibo test images/kibo gallery 6.jpeg",
         "./Kibo test images/kibo gallery 4.jpeg",
         "./Kibo test images/kibo gallery 1.jpeg",
         "./Kibo test images/kibo gallery 7.jpeg",
-        "./Kibo test images/kibo gallery 1.1.jpeg"
+        "./Kibo test images/kibo gallery8.jpeg",
+        "./Kibo test images/kibo gallery9.jpeg"
+        
       ]
     },
+    
     {
       "rowId": "row4",
-      "whatsapp": {
-        "link": "https://wa.me/254715408584",
-        "iconClass": "bi bi-whatsapp",
-        "text": "Book your space!<span role=\"img\" aria-label=\"hand wave\" class=\"emoji\">👋</span>"
-      }
-    },
-    {
-      "rowId": "row5",
       "backToTopButton": {
         "text": "&#8679;"
       }

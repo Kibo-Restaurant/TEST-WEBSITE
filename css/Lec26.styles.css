@@ -42,12 +42,14 @@ body{
   margin-bottom: 10px;
   line-height:1;
   text-decoration:none; 
+  
 }
 
 
 #nav-list .nav-link {
   
   margin-top:10px;
+  
 }
 #nav-list {
   color:#000000;
@@ -55,8 +57,9 @@ body{
   align-items: center;
 }
 
-#nav-list :hover, :focus{
+.nav-item :hover, :focus{
   background: #E7E7E7;
+  background-size:auto;
   transition: all 0.3s ease;
 }
 #nav-list span{
@@ -240,6 +243,7 @@ padding-right: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
   opacity: 0; /* Hidden by default */
+  z-index:1001;
 }
 
 #back-to-top:hover {
@@ -263,14 +267,17 @@ padding-right: 15px;
   flex-flow: 0;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   transition: all 0.1s ease;
-  font-size: 70%;
+  font-size: 90%;
   background-color: #ffa500;
   z-index:1000;
   top:0%;
- 
 }
+/* @media screen  */
+/* #navbar-properties ul{
+  justify-content:center;
+} */
 #shrink-logo{
 width: -50%;
 height: -50%;
@@ -294,9 +301,11 @@ position: relative;
   justify-content: center;
   align-items: center;
   position:relative;
+  margin-top:0;
+  margin-bottom: 0;
 }
 #trip-advisor-2{
-  background: url("../Kibo test images/beach\ background\ 1.jpg") no-repeat;
+  background: url("../Kibo test images/beach\ background\ 1\ \(1\).jpg") no-repeat;
   background-position:center;
   background-size: cover;
   background-size: 100% auto;
@@ -308,7 +317,7 @@ position: relative;
   position:relative;
 }
 #trip-advisor-3{
-  background: url("../Kibo test images/beach\ background\ 2.jpg") no-repeat;
+  background: url("../Kibo test images/beach background 2 (1).jpg") no-repeat;
   background-position:center;
   background-size: cover;
   background-size: 100% auto;
@@ -794,9 +803,13 @@ padding-right:30px;
   overflow:hidden;
   width:100%;
   height: auto;
-  position: relative;
+  position: relative;/* Ensures overlay is relative to the video */
+  overflow: hidden;
+  /* Prevents any overflow from showing */
+  box-sizing: border-box;
 }
 .carousel-video{
+  background-color: black; /* Fallback background color */
   width:100%;
   height:auto;
   display:block; 
@@ -806,11 +819,10 @@ padding-right:30px;
   position:absolute;
   top:0;
   left:0;
-  bottom:0;
   right:0;
-  width:100%;
-  height:100%;  /*These specifications gave me a sticking out overlay -understand them*/
-  z-index: 2; /*overlay on top of the video*/
+  bottom:0;
+
+  z-index: 1; /*overlay on top of the video*/
   background: rgba(107, 206, 206, 0.5); /*semi transparent white, like a veil
   rgb is just another way of choosing the right color combination */
   pointer-events: none; /* Allows clicks to pass through the overlay*/
@@ -822,16 +834,18 @@ padding-right:30px;
 
 /*SLow Loading*/
 .slow-load {
-  background-color: grey; /*White for images*/
+  /* background-color:rgb(226, 205, 205); White for images */
   display:block;
-  width: 100%; /*Can be adjusted*/
-  height: auto; /*Can be adjusted*/
-  opacity: 0; /*Hide images and alt text initially*/
-  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease; /*Smootth transition when showing the image*/
+  width: 100%; /* Ensures it fills the container */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Prevents the image from exceeding container width */
+   opacity: 1; /*Make the placeholder visible initially */
+  /*opacity: 0;    Hide images and alt text initially*/
+  /* transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease; Smootth transition when showing the image */
 }
-.slow-load.video-placeholder {
-  background-color:black; /*Black for videos*/
-}
+/* .slow-load.video-placeholder {
+  /* background-color:black; Black for videos *
+} */
 
 .finished-loading {
   opacity:1; /*Show the image/ video once loaded*/
@@ -839,6 +853,40 @@ padding-right:30px;
 .slow-load:hover{
   transform: scale(1.05); /*SLightly increase the size*/
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /*add a subtle shadow to create depth*/
+}
+.lazy-load{
+  background-color:rgb(226, 205, 205); /*White for images*/
+  display:block;
+  width: 100%; /* Ensures it fills the container */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Prevents the image from exceeding container width */
+   opacity: 1; /*Make the placeholder visible initially */
+  /*opacity: 0;    Hide images and alt text initially*/
+  
+}
+/*Overiding the css class */
+#events-images{
+  background-color: none; /*White for images*/
+  background-clip:content-box;
+  display:block;
+  box-sizing: border-box;
+  object-fit:contain;
+  width: 100%; /* Ensures it fills the container */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Prevents the image from exceeding container width */
+  opacity: 1; /*Make the placeholder visible initially */
+  /*opacity: 0;    Hide images and alt text initially*/
+  transition: opacity 0.5s ease, transform 0.3s ease ;
+  box-shadow: none;
+}
+#events-images:hover{
+  transform:none; /*SLightly increase the size*/
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+}
+#events-videos:hover{
+  /* background-color:black; Black for videos */
+  transform: none;
+  box-shadow: none; /*add a subtle shadow to create depth*/
 }
 
 /*About page*/
@@ -996,7 +1044,25 @@ padding-right:30px;
  .menu-item-description{
   text-align:center;
   }
+  #navbar-properties{
+    font-size: 70%;
+    flex-grow:0;
+    /* transition: all 0.01s ease; */
+    justify-content: bottom;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+    /* justify-content: center; */
+  }
+  .custom-toggler{
+    display:flex;
+    size:-20%;
+    margin-bottom: 1px;
+    padding-bottom: 0;
+  }
+  
 }
+
 
 
 /* @media screen and (max-width:767){
@@ -1032,6 +1098,38 @@ padding-right:30px;
   width: 100%;
  }
 }
+@media screen and (max-width:768px)
+{
+  
+    #trip-advisor-1, #trip-advisor-2, #trip-advisor-3 {
+      height: 700px; /* Reduce the height for small screens */
+      background-size: 100% auto;
+      margin-top:-150px;
+     
+    }
+  
+    .carousel-advisor {
+      top: 1px; /* Adjust top to reduce the gap */
+      margin-bottom:-15px; /* Reduce bottom margin */
+      width: 100%; /* Take up full width on small screens */
+      height: auto; /* Adjust height based on content */
+      border: none;
+    }
+  
+    .carousel-advisor-slide h4, .carousel-advisor-slide p {
+      font-size: 0.9 rem; /* Adjust font size for readability */
+    }
+  
+    /* Adjust the size and position of the heartbeat button */
+    #heartbeat-button {
+      top: 18%; /* Adjust the position to fit better in smaller images */
+      transform: scale(0.8); /* Make the button slightly smaller */
+    }
+     .kiboquick-view{
+      margin-bottom:0px;
+      padding-bottom: 0px;
+     }
+  }
 
 
  

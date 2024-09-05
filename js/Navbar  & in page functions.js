@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   //       if(navbarCollapse.classList.contains('show')) {
   //          navbarCollapse.classList.remove('show');
   //      }
- 
+  // initializeNavbar()
      
 });
 
@@ -59,6 +59,46 @@ function initializeNavbar() {
    toggler.classList.toggle('active');
    navbarContent.classList.toggle('show');
  });
+ //Clicking outside the NavBar makes navbar collapse to close
+//  toggler.addEventListener('click', (event) => {
+//   event.stopPropagation(); // Prevents the click event from bubbling up to the window
+//   toggler.classList.toggle('active');
+//   navbarContent.classList.toggle('show');
+// });
+
+//Current page indicator by keeping white background on nav-item on
+const navItems = document.querySelectorAll('.nav-item');
+
+// Convert NodeList to Array if necessary for older browsers
+// const navItemsArray = Array.from(navItems);
+
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].addEventListener('click', function() {
+    // Remove 'active' class from all nav-items
+    for (let j = 0; j < navItems.length; j++) {
+      navItems[j].classList.remove('active');
+    }
+    
+    // Add 'active' class to the clicked nav-item
+    this.classList.add('active');
+  });
+}
+
+
+// Collapse the navbar when clicking outside of it
+window.addEventListener('click', (event) => {
+  // Check if the clicked element is outside the navbar and the toggler
+  if (!navbarContent.contains(event.target) && !toggler.contains(event.target)) {
+      navbarContent.classList.remove('show');
+      toggler.classList.remove('active');
+  }
+});
+
+//  navShrink.addEventListener('click', () => {
+  
+//  });
+
+
  //BACK TO TOP BUTTON
  // Add this to your JavaScript file or inside a <script> tag
  const backToTopButton = document.getElementById('back-to-top');
@@ -94,6 +134,9 @@ function initializeNavbar() {
      shrinkLogo.id = 'custom-logo';
    }
    }); 
+
+       //ALSO LOAD CAROUSEL when the  DOMContentLoaded event fires
+      
 
       //TRIP ADVISOR CAROUSELS--This one is an in page function on the home page
 
@@ -159,18 +202,7 @@ function initializeNavbar() {
  moveAdvisor(nowAdvisor);
 
  //THIS makes video mute and autoplay in all browsers
- function intializeVideoSettings(){
-  //ALSO LOAD CAROUSEL when the  DOMContentLoaded event fires
-const videoElement = document.querySelector('.carousel-video');
-//const overlay = document.querySelector('.overlay');//tO AVOID FLICKERING I used html and css only.
- //Ensure the video starts playing especially on some browsersthat might prevent autoplay
- videoElement.play().catch(error =>{
-  console.log('Autoplay prevented, trying to play video again:', error);
-  videoElement.muted = true; //Ensures it's muted
-  videoElement.play();
- }); 
-}
-intializeVideoSettings()
+ 
 
 }
 
