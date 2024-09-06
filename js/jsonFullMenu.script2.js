@@ -79,7 +79,7 @@ function loadExternaljsonMenu() {
             img.height = 150;
             // img.src = menu.tileImage; -before set Attribute-data-src
             img.setAttribute('data-src', menu.tileImage); //Set the actual image source in data src
-            img.src = '../Kibo-test-images/16-9-Light-grey-placeholder.png';
+            img.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
             img.alt = menu.tileTitle;
             console.log(menu.tileTitle);
             //Append elements to the innerDiv
