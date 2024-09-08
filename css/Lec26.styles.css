@@ -600,7 +600,7 @@ line-height: 2;
 .carousel-container{
   display:flex;
   transition: transform 0.5s ease-in-out;
-  height:600px;
+  height:700px;
 }
 .carousel-slide{
   min-width:100%;
@@ -652,7 +652,7 @@ line-height: 2;
   transition: all 0.3s ease;
 }
 #menu-tile{
-  background: url('../Kibo-test-images/Kibo-Menu-photo-(476).png') no-repeat;
+  background: url("../Kibo-test-images/huge-seafood.jpg") no-repeat;
   background-position:center;
   background-size: cover;
 }
