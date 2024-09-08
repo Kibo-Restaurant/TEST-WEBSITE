@@ -609,7 +609,7 @@ line-height: 2;
 .carousel-slide img{
   width: 100%;
   height:100%;
-  object-fit:cover; /* contain is adjustable to cover.  object-fit:cover =>>Ensures images 
+  object-fit:contain; /* contain is adjustable to cover.  object-fit:cover =>>Ensures images 
   cover the slide area without distortion*/
   display:block;
 }
