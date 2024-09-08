@@ -15,7 +15,7 @@ body{
   z-index:10;
   opacity:1; */
    /* color: #000000 ;  */
- lineheight:1.6;
+ line-height:1.6;
  
   font-family: "Oxygen", sans-serif; 
 } 
@@ -656,12 +656,12 @@ line-height: 2;
   background-size: cover;
 }
 #specials-tile{
-  background: url('../Kibo-test-images/Kibo-specials-photo-(476).png') no-repeat;
+  background: url("../Kibo-test-images/fortam-beach.jpg") no-repeat;
   background-position:center;
   background-size: cover;
 }
 #beach-bed-tile{  
- background: url("Kibo-test-images/beach-view-in.jpg") no-repeat;
+ background: url("../Kibo-test-images/beach-view-in.jpg") no-repeat;
   background-position:center;
   background-size: cover;
 }
@@ -677,7 +677,7 @@ line-height: 2;
 }
 
 
-#services-tile span, #map-tile span, #beach-bed-tile span{
+#services-tile span, #map-tile span, #beach-bed-tile span,#menu-tile span{
  position: absolute;
   bottom:0;
   right:0;
