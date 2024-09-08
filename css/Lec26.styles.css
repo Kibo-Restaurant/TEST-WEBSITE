@@ -645,7 +645,7 @@ line-height: 2;
   border: 2px solid #8b6a2d;
   overflow:hidden;
 }
-#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover#beach-bed-tile:hover{
+#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover, #beach-bed-tile:hover{
   box-shadow:0 1px 5px 1px #504a4a;
   transition: all 0.3s ease;
 }
@@ -660,7 +660,7 @@ line-height: 2;
   background-size: cover;
 }
 #beach-bed-tile{  
- background: url('../Kibo-test-images/beach-view-in.jpg) no-repeat;
+ background: url("../Kibo-test-images/beach-view-in.jpg") no-repeat;
   background-position:center;
   background-size: cover;
 }
@@ -684,7 +684,7 @@ line-height: 2;
   text-align:center;
   font-size:1.6 em;
   text-transform:uppercase;
-  background-color: #000;
+  background-color: #ffa500;
   color:#fff;
   opacity:.8;
 }
