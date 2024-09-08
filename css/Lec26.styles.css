@@ -595,7 +595,7 @@ line-height: 2;
   max-width:100%;
   overflow: hidden;
   margin: auto;
-  height: 400px; /*This is an Adjustable*/
+  height: 800px; /*This is an Adjustable*/
 }
 .carousel-container{
   display:flex;
@@ -605,10 +605,11 @@ line-height: 2;
 .carousel-slide{
   min-width:100%;
   box-sizing: border-box;
+ 
 }
 .carousel-slide img{
   width: 100%;
-  height:1600px;
+  height:100%;
   object-fit:cover; /* contain is adjustable to cover.  object-fit:cover =>>Ensures images 
   cover the slide area without distortion*/
   display:block;
