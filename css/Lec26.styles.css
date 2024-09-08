@@ -659,6 +659,11 @@ line-height: 2;
   background-position:center;
   background-size: cover;
 }
+#beach-bed-tile{
+  background: url('../Kibo-test-images/') no-repeat;
+  background-position:center;
+  background-size: cover;
+}
 #menu-tile1{
   background: url('../Kibo-test-images/Kibo-Menu-photo-3-(476).png') no-repeat;
   background-position:center;
@@ -669,6 +674,7 @@ line-height: 2;
   background-position:center;
   background-size: cover;
 }
+
 
 #services-tile span, #map-tile span{
   position: absolute;
