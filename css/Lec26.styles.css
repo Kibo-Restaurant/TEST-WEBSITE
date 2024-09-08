@@ -635,8 +635,8 @@ line-height: 2;
 
 
 
-#menu-tile,#specials-tile, #menu-tile1, #specials-tile1, #services-tile, #map-tile {
-  height: 250px;
+#menu-tile,#specials-tile, #menu-tile1, #specials-tile1, #services-tile, #map-tile, #beach-bed-tile{
+ height: 250px;
   width: 100%;
   margin-bottom: 15px;
   margin-left:auto;
@@ -645,7 +645,7 @@ line-height: 2;
   border: 2px solid #8b6a2d;
   overflow:hidden;
 }
-#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover{
+#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover#beach-bed-tile:hover{
   box-shadow:0 1px 5px 1px #504a4a;
   transition: all 0.3s ease;
 }
@@ -659,8 +659,8 @@ line-height: 2;
   background-position:center;
   background-size: cover;
 }
-#beach-bed-tile{
-  background: url('../Kibo-test-images/') no-repeat;
+#beach-bed-tile{  
+ background: url('../Kibo-test-images/beach-view-in.jpg) no-repeat;
   background-position:center;
   background-size: cover;
 }
@@ -676,8 +676,8 @@ line-height: 2;
 }
 
 
-#services-tile span, #map-tile span{
-  position: absolute;
+#services-tile span, #map-tile span, #beach-bed-tile span{
+ position: absolute;
   bottom:0;
   right:0;
   width: 100%;
