@@ -1,33 +1,34 @@
-{"menu-items":[
-  {
-    imagetile1: "Kibo-test-images/sea-foodhuge.jpg",
-    imagetile2: "Kibo-test-images/sea-foodhuge2.jpg",
-    imagetile3: "Kibo-test-images/Squid big.png",
-    texttile: "Grilled sea food"
-  },
-  {
-    imagetile1: "Kibo-test-images/vegetarian-menu.jpg",
-    imagetile2: "Kibo-test-images/Vegetarian-menu4.jpg",
-    imagetile3: "Kibo-test-images/Vegetarian-menu2.jpg",
-    texttile: "Vegetarian food"
-  },
-  {
-    imagetile1: "Kibo-test-images/cocktails-kibo.jpg",
-    imagetile2: "Kibo-test-images/cocktails-kibo2.jpg",
-    imagetile3: "Kibo-test-images/Cocktail-menu5.jpg",
-    texttile: "Cocktails"
-  },
-  {
-    imagetile1: "Kibo-test-images/curry-menu.jpg",
-    imagetile2: "Kibo-test-images/Curry-menu4.jpg",
-    imagetile3: "Kibo-test-images/Photo-coming-soon!.png",
-    texttile: "Curries"
-  },
-  {
-    imagetile1: "Kibo-test-images/fruits-menu.jpg",
-    imagetile2: "Kibo-test-images/Fruits-menu5.jpg",
-    imagetile3: "Kibo-test-images/Photo-coming-soon!.png",
-    texttile: "Tropical Fruits"
-  }
-]
+{
+  "menu-items": [
+    {
+      "imagetile1": "Kibo-test-images/sea-foodhuge.jpg",
+      "imagetile2": "Kibo-test-images/sea-foodhuge2.jpg",
+      "imagetile3": "Kibo-test-images/Squid big.png",
+      "texttile": "Grilled sea food"
+    },
+    {
+      "imagetile1": "Kibo-test-images/vegetarian-menu.jpg",
+      "imagetile2": "Kibo-test-images/Vegetarian-menu4.jpg",
+      "imagetile3": "Kibo-test-images/Vegetarian-menu2.jpg",
+      "texttile": "Vegetarian food"
+    },
+    {
+      "imagetile1": "Kibo-test-images/cocktails-kibo.jpg",
+      "imagetile2": "Kibo-test-images/cocktails-kibo2.jpg",
+      "imagetile3": "Kibo-test-images/Cocktail-menu5.jpg",
+      "texttile": "Cocktails"
+    },
+    {
+      "imagetile1": "Kibo-test-images/curry-menu.jpg",
+      "imagetile2": "Kibo-test-images/Curry-menu4.jpg",
+      "imagetile3": "Kibo-test-images/Photo-coming-soon!.png",
+      "texttile": "Curries"
+    },
+    {
+      "imagetile1": "Kibo-test-images/fruits-menu.jpg",
+      "imagetile2": "Kibo-test-images/Fruits-menu5.jpg",
+      "imagetile3": "Kibo-test-images/Photo-coming-soon!.png",
+      "texttile": "Tropical Fruits"
+    }
+  ]
 }
