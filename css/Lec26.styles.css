@@ -1140,8 +1140,7 @@ padding-right:30px;
 
 .reduce-image img {
     max-width: 200px;
-    max-width:113px;
-    height: auto;
+    max-height:113px;
     display: block;
 }
 
