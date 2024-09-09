@@ -58,7 +58,7 @@ function loadExternaljsonMenu() {
 
                     // Create a column for each menu category
                     const column = document.createElement('div');
-                    column.classList.add('col-sm-12', 'col-md-6');
+                    column.classList.add('col-sm-12', 'col-md-6' );
 
                     // Create the first row (two images: imagetile1 and imagetile2)
                     const row1 = document.createElement('div');
@@ -67,6 +67,7 @@ function loadExternaljsonMenu() {
                     // Image col 1.1 (imagetile1)
                     const col1Img1 = document.createElement('div');
                     col1Img1.classList.add('col-sm-6', 'col-md-3');
+                      col1Img1.id = 'reduce-image'; // Set the ID
                     const img1 = document.createElement('img');
                     img1.src = item.imagetile1;
                     col1Img1.appendChild(img1);
@@ -74,6 +75,8 @@ function loadExternaljsonMenu() {
                     // Image col 1.2 (imagetile2)
                     const col1Img2 = document.createElement('div');
                     col1Img2.classList.add('col-sm-6', 'col-md-3');
+                    
+                    col1Img1.id = 'reduce-image'; // Set the ID
                     const img2 = document.createElement('img');
                     img2.src = item.imagetile2;
                     col1Img2.appendChild(img2);
@@ -89,6 +92,7 @@ function loadExternaljsonMenu() {
                     // Image col 1.3 (imagetile3)
                     const col2Img = document.createElement('div');
                     col2Img.classList.add('col-sm-6', 'col-md-3');
+                    col1Img1.id = 'reduce-image'; // Set the ID
                     const img3 = document.createElement('img');
                     img3.src = item.imagetile3;
                     col2Img.appendChild(img3);
