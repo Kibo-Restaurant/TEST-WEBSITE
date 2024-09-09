@@ -1139,7 +1139,8 @@ padding-right:30px;
   }
 
 .reduce-image img {
-    max-width: 100%;
+    max-width: 200px;
+    max-width:113px;
     height: auto;
     display: block;
 }
