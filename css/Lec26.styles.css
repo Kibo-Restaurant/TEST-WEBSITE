@@ -1139,8 +1139,8 @@ padding-right:30px;
   }
 
 .reduce-image img {
-    max-width: 200px;
-    max-height:113px;
+    max-width: 400px;
+    max-height:225px;
     display: block;
     object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
 }
