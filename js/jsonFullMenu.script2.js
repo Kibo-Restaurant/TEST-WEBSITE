@@ -44,7 +44,7 @@ function loadExternaljsonMenu() {
          //Show footer
          document.getElementById('hide-footer').style.display ='block';
         console.log(data);
-        if (!data["menu-items"]) {
+        if (!data[  data['menu-items']) {
             throw new Error('JSON does not contain menu-items property');
         }
         // Create the parent row
