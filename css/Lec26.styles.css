@@ -1142,6 +1142,13 @@ padding-right:30px;
     max-width: 200px;
     max-height:113px;
     display: block;
+    object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
+}
+
+.reduce-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
