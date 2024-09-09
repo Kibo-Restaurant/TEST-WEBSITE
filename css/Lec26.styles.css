@@ -1151,6 +1151,10 @@ padding-right:30px;
     align-items: center;
    overflow: hidden;
 }
+@media (min-width: 992px) { /* For large screens and above */
+  hr {
+    display: none;
+  }
 
 
  
