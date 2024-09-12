@@ -599,12 +599,12 @@ line-height: 2;
 .carousel-container{
   display:flex;
   transition: transform 0.5s ease-in-out;
-  height:600px;
+  height:auto;
 }
 .carousel-slide{
   min-width:100%;
-  box-sizing: border-box;
- 
+  box-sizing:border-box;
+  height: calc(100vw * 9 / 16);
 }
 .carousel-slide img{
   width: 100%;
@@ -630,6 +630,7 @@ line-height: 2;
 .next{
   right: 10px;
 }
+
 
 
 
@@ -962,6 +963,7 @@ padding-right:30px;
     max-height:55px;
   }
 
+
 }
 /*******Large devices only**********/
 @media(min-width:992px) and (max-width:1199px) {
@@ -995,7 +997,8 @@ padding-right:30px;
  #separate-footer{
     width:50%;
   }
-
+ 
+  /*  MEDIA SCREEN CAROUSEL ADJUSTMENT*/
 }
 /********small devices only* ******/
 @media (min-width:576px) and (max-width:767px) {
@@ -1155,7 +1158,7 @@ padding-right:30px;
   hr {
     display: none;
   }
-
+}
 
  
 
