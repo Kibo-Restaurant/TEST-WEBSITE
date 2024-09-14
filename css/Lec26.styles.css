@@ -631,13 +631,7 @@ line-height: 2;
   right: 10px;
 }
 
-
-
-
-
-
-
-#menu-tile,#specials-tile, #menu-tile1, #specials-tile1, #services-tile, #map-tile, #beach-bed-tile{
+#menu-tile, #events-tile, #map-tile, #beach-bed-tile{
  height: 250px;
   width: 100%;
   margin-bottom: 15px;
@@ -647,7 +641,7 @@ line-height: 2;
   border: 2px solid #8b6a2d;
   overflow:hidden;
 }
-#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover, #beach-bed-tile:hover{
+#menu-tile:hover, #events-tile:hover, #map-tile:hover, #beach-bed-tile:hover{
   box-shadow:0 1px 5px 1px #504a4a;
   transition: all 0.3s ease;
 }
@@ -656,29 +650,16 @@ line-height: 2;
   background-position:center;
   background-size: cover;
 }
-#specials-tile{
-  background: url("../Kibo-test-images/fortam-beach.jpg") no-repeat;
-  background-position:center;
-  background-size: cover;
-}
-#beach-bed-tile{  
+
+ #beach-bed-tile{  
  background: url("../Kibo-test-images/fortam-beach.jpg") no-repeat;
   background-position:center;
   background-size: cover;
 }
-#menu-tile1{
-  background: url('../Kibo-test-images/Kibo-Menu-photo-3-(476).png') no-repeat;
-  background-position:center;
-  background-size: cover;
-}
-#specials-tile1{
-  background: url('../Kibo-test-images/Kibo-Menu-photo-1-(476).png') no-repeat;
-  background-position:center;
-  background-size: cover;
-}
 
 
-#services-tile span, #map-tile span, #beach-bed-tile span,#menu-tile span{
+
+#events-tile span, #map-tile span, #beach-bed-tile span,#menu-tile span{
  position: absolute;
   bottom:0;
   right:0;
@@ -687,7 +668,7 @@ line-height: 2;
   font-size:1.6 em;
   text-transform:uppercase;
   background-color: #ffa500;
-  color:#fff;
+  color:#000000;
   opacity:.8;
 }
 .icon-images{
@@ -975,6 +956,7 @@ padding-right:30px;
     max-width:45px;
     max-height: 45px;
   }
+  
 
   }
 /*******Medium devices only*******/
@@ -997,7 +979,24 @@ padding-right:30px;
  #separate-footer{
     width:50%;
   }
- 
+  /* THE NEW MENU*/
+ .reduce-image{
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  Width:50%;
+  height:auto;
+  
+ }
+ .reduce-image img{
+  object-fit: cover;
+  overflow:hidden;
+ }
+  
+
+
+  
+ /* THE NEW MENU*/
   /*  MEDIA SCREEN CAROUSEL ADJUSTMENT*/
 }
 /********small devices only* ******/
@@ -1107,6 +1106,12 @@ padding-right:30px;
     flex: 0 0 auto;
   width: 100%;
  }
+ 
+.carousel-slide{
+  min-width:100%;
+  box-sizing:border-box;
+  height: calc(100vw * 9/12);
+}
 }
 @media screen and (max-width:768px)
 {
@@ -1142,24 +1147,127 @@ padding-right:30px;
   }
 
 .reduce-image img {
-    max-width: 400px;
-    max-height:225px;
+   /* position:absolute; */
+    max-width: 100%;
+    max-height:100%;
     display: block;
-    object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
-}
+    object-fit:cover;/* Ensures the image scales while maintaining aspect ratio */
+     
+
+  }
 
 .reduce-image {
+   /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
-   overflow: hidden;
+    overflow: hidden;
+    border: 0.5px solid rgb(252, 248, 248);
+    /* height:200px;
+    width:200px; */
+    padding:2px;
 }
-@media (min-width: 992px) { /* For large screens and above */
+
+@media (min-width: 576px) { /* For large screens and above */
   hr {
     display: none;
   }
 }
+/* Text tile styling */
+.menu-contents p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+/*Background styling to handles different ratios*/
+.menu-contents  {
+  background-color: #f8ca74; /* Light background for contrast */
+  width: 100%;
+  box-sizing:content-box;
+}
+.menu-box{
+  margin-left:10px;
+  margin-right:10px;
+  justify-content: center;
+  align-items: center;
+  display: flex; /* Ensure the flex layout is applied */
+  flex-wrap: wrap; /* Allow items to wrap within the available space */
+  padding: 10px;
+}
 
+/* THE NEW MENU*/
+
+/* THE NEW MENU*/
+/* For small screens */
+@media (max-width: 565px) {
+    .menu-contents {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 2px;
+        margin-left: 2px;
+        padding-left:0;
+    }
+    .reduce-image {
+        width: 100%;
+        height: auto; 
+    }
+    .reduce-image img{
+      padding:2px;
+    }
+}
+@media (min-width: 992px){
+  /* .reduce-image{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    Width:25%;
+    height:auto;
+  }
+  .reduce-image img{
+   object-fit: cover;
+  } */
+ 
+  .menu-box {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute the content boxes */
+    background-color: #f8ca74; 
+    padding: 0; /* Remove any padding if present */
+    margin: 0; /* Remove any margin if present */
+  }
+
+  .menu-contents {
+    flex: 1 1 50%; /* Take 50% of the width for each column */
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+    display: flex;
+    flex-direction: column; /* Make sure text and images stack within each content box */
+  }
+
+  .reduce-image {
+    width: 50%; /* Allow image container to take full width of the parent * I TOOK HALF WIDTH - IT IS THE ONLY THING MAKING TILES APPEAR 4 IN THE COLUMN CALLED MENU-CONTENTS */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 3px;
+    margin-top:0;
+    margin: 0; /* Remove margin between images */
+  }
+
+  .reduce-image img {
+    width: 100%; /* Ensure the images fill the container */
+    height: auto;
+    object-fit: cover; /* Cover the container without distorting aspect ratio */
+  }
+  
+}
+
+/* THE NEW MENU*/
  
 
 /**

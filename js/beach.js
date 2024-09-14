@@ -1,0 +1,1 @@
+//This file will have a json on top and js fetching the json data. This is another way of load info dynamically into a html

@@ -17,8 +17,6 @@
 // //      }
 
 //    });
-
-
 function loadExternaljsonMenu() {
     return new Promise((resolve, reject) => {
         // Show the loading gif
@@ -50,67 +48,61 @@ function loadExternaljsonMenu() {
                 
                 // Create the parent row
                 const menuRow = document.createElement('div');
-                menuRow.classList.add('row');
+                menuRow.classList.add('menu-box', 'row');
 
                 // Loop through the menu items (4 categories)
                 for (let i = 0; i < data['menu-items'].length; i++) {
-                    const item = data['menu-items'][i];
+                    const item = data['menu-items'][i]; // Accessing the json through bracket notation.
 
                     // Create a column for each menu category
                     const column = document.createElement('div');
-                    column.classList.add('col-sm-12', 'col-md-6' );
+                    column.classList.add('col-sm-12', 'col-lg-6', 'menu-contents');
 
-                    // Create the first row (two images: imagetile1 and imagetile2)
+                    // Create the first row (1 textblock and one image: Texttile1 and imagetile1)
                     const row1 = document.createElement('div');
-                    
                     row1.classList.add('row');
 
-                    // Image col 1.1 (imagetile1)
+                    // Text block (texttile)
+                    const col1Text = document.createElement('div');
+                    col1Text.classList.add('reduce-image');
+                    const text = document.createElement('p');
+                    text.innerText = item.texttile;
+                    col1Text.appendChild(text);
+
+                    // Image block (imagetile1)
                     const col1Img1 = document.createElement('div');
-                    
-                    col1Img1.classList.add('col-sm-6', 'col-md-3','reduce-image');
-                     
+                    col1Img1.classList.add('reduce-image','slow-load');
                     const img1 = document.createElement('img');
                     img1.src = item.imagetile1;
                     col1Img1.appendChild(img1);
+                    
+                    // Append col1Text and col1Img1 to row1
+                    row1.appendChild(col1Text);
+                    row1.appendChild(col1Img1);
 
-                    // Image col 1.2 (imagetile2)
+                    // Create the second row (two images: imagetile2 and imagetile3)
+                    const row2 = document.createElement('div');
+                    row2.classList.add('row');
+
+                    // Image block (imagetile2)
                     const col1Img2 = document.createElement('div');
-                    col1Img2.classList.add('col-sm-6', 'col-md-3','reduce-image');
-                    
-                    
+                    col1Img2.classList.add('reduce-image','slow-load');
                     const img2 = document.createElement('img');
                     img2.src = item.imagetile2;
                     col1Img2.appendChild(img2);
 
-                    // Append col1.1 and col1.2 to row1
-                    row1.appendChild(col1Img1);
-                    row1.appendChild(col1Img2);
-
-                    // Create the second row (one image: imagetile3 and one text block)
-                    const row2 = document.createElement('div');
-                    row2.classList.add('row');
-
-                    // Image col 1.3 (imagetile3)
-                    const col2Img = document.createElement('div');
-                    col2Img.classList.add('col-sm-6', 'col-md-3','reduce-image');
-                 
+                    // Image block (imagetile3)
+                    const col1Img3 = document.createElement('div');
+                    col1Img3.classList.add('reduce-image','slow-load');
                     const img3 = document.createElement('img');
                     img3.src = item.imagetile3;
-                    col2Img.appendChild(img3);
+                    col1Img3.appendChild(img3);
 
-                    // Text col 1.4 (texttile)
-                    const col2Text = document.createElement('div');
-                    col2Text.classList.add('col-sm-6', 'col-md-3');
-                    const text = document.createElement('p');
-                    text.innerText = item.texttile;
-                    col2Text.appendChild(text);
-
-                    // Append col1.3 and col1.4 to row2
-                    row2.appendChild(col2Img);
-                    row2.appendChild(col2Text);
-
-                    // Append rows to the column
+                    // Append col1Img2 and col1Img3 to row2
+                    row2.appendChild(col1Img2);
+                    row2.appendChild(col1Img3);
+                    
+                    // Append row1 and row2 to the column
                     column.appendChild(row1);
                     column.appendChild(row2);
 
@@ -145,6 +137,7 @@ function loadExternaljsonMenu() {
         }
     });
 }
+
 
 // LOADING A JSON FILE WITH MENU DATA
 // WAIT UNTIL FETCHING OPERATION IS COMPLETE THEN RUN THIS CODE Load the content when the DOM is fully loaded
