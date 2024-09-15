@@ -49,6 +49,7 @@ body{
 #nav-list .nav-link {
   
   margin-top:10px;
+  font-size: 16px;
   
 }
 #nav-list {
@@ -119,8 +120,10 @@ body{
   font-size:1.2em; */
   
 
-#phone a{/*Phone number*/
-  text-align:right;
+  .bi {/*Phone number*/
+top:10%;
+}
+#phone{
   padding-bottom:0;
 
 }
@@ -955,6 +958,9 @@ padding-right:30px;
    #shrink-logo{
     max-width:45px;
     max-height: 45px;
+  }
+  #phone{
+    font-size:65%;
   }
   
 

@@ -73,7 +73,12 @@ function loadExternaljsonMenu() {
                     const col1Img1 = document.createElement('div');
                     col1Img1.classList.add('reduce-image','slow-load');
                     const img1 = document.createElement('img');
-                    img1.src = item.imagetile1;
+                    // img1.src = item.imagetile1;
+                    
+                    img1.classList.add('slow-load','img-fluid');
+                    img1.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
+                    img1.setAttribute('data-src',item.imagetile1);
+                    img1.alt = item.imagetile2.alt;
                     col1Img1.appendChild(img1);
                     
                     // Append col1Text and col1Img1 to row1
@@ -86,16 +91,25 @@ function loadExternaljsonMenu() {
 
                     // Image block (imagetile2)
                     const col1Img2 = document.createElement('div');
-                    col1Img2.classList.add('reduce-image','slow-load');
+                    col1Img2.classList.add('reduce-image');
                     const img2 = document.createElement('img');
-                    img2.src = item.imagetile2;
+                    // img2.src = item.imagetile2; //quest to placeholder
+                    img2.classList.add('slow-load','img-fluid');
+                    img2.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
+                    img2.setAttribute('data-src',item.imagetile2);
+                    img2.alt = item.imagetile2.alt;
                     col1Img2.appendChild(img2);
 
                     // Image block (imagetile3)
                     const col1Img3 = document.createElement('div');
-                    col1Img3.classList.add('reduce-image','slow-load');
+                    col1Img3.classList.add('reduce-image');
                     const img3 = document.createElement('img');
-                    img3.src = item.imagetile3;
+                    // img3.src = item.imagetile3;
+    
+                    img3.classList.add('slow-load','img-fluid');
+                    img3.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
+                    img3.setAttribute('data-src',item.imagetile3);
+                    img3.alt = item.imagetile3.alt;
                     col1Img3.appendChild(img3);
 
                     // Append col1Img2 and col1Img3 to row2
