@@ -526,6 +526,9 @@ position: relative;
 #hide-footer{
 display: none;
 }
+#hide-video{
+  display:none;
+}
 
 
 
@@ -819,6 +822,21 @@ padding-right:30px;
   rgb is just another way of choosing the right color combination */
   pointer-events: none; /* Allows clicks to pass through the overlay*/
   backdrop-filter: blur(0px); /*Optional : Adds a bur effect to the veil*/
+}
+.text-onoverlay{
+  position:absolute;
+  z-index: 4;
+  /* Centering the text both horizontally and vertically */
+  top: 50%;
+  left: 50%;  
+   transform: translate(-50%, -50%);
+
+  border: 2px solid black;
+  padding:0;
+  cursor: pointer;
+}
+.beach-video{
+  position: relative;
 }
 
 
@@ -1190,7 +1208,8 @@ padding-right:30px;
 }
 /*Background styling to handles different ratios*/
 .menu-contents  {
-  background-color: #f8ca74; /* Light background for contrast */
+  /* background-color: #f8ca74; Light background for contrast */
+  /* background-image: url('../Kibo-test-images/menu-background-kibo-restaurant-watamu.png')  no-repeat; */
   width: 100%;
   box-sizing:content-box;
 }
@@ -1240,7 +1259,8 @@ padding-right:30px;
   .menu-box {
     display: flex;
     justify-content: space-between; /* Evenly distribute the content boxes */
-    background-color: #f8ca74; 
+    /* background-color: #f8ca74;  */
+    /* background-image: url('../Kibo-test-images/menu-background-kibo-restaurant-watamu.png'); */
     padding: 0; /* Remove any padding if present */
     margin: 0; /* Remove any margin if present */
   }
@@ -1272,6 +1292,38 @@ padding-right:30px;
   }
   
 }
+
+.menu-box {
+  
+  background-image: url('../Kibo-test-images/background-tile-kibo-restaurant.png');
+  /* background-size: cover; */
+  background-position: cover;
+  border:none;
+}
+.menu-contents{
+  border:none;
+}
+.reduceimage{
+  border:none;
+}
+
+/* .menu-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  * background-color: rgba(56, 53, 53, 0.5);  *
+  * Adjust color and opacity here *
+  z-index: 1;
+   * Ensure this overlay stays below content but above the background *
+}
+
+.menu-box > * {
+  position: relative; * Ensure content stays above the overlay *
+  z-index: 2;
+} */
 
 /* THE NEW MENU*/
  

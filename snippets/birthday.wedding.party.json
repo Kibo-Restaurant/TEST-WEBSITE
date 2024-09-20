@@ -39,31 +39,7 @@
         }
       ]
     },
-    {
-      "rowId": "row2",
-      "video": {
-        "src": "Kibo-test-videos/Ocean-view-in-5-seconds.mp4",
-        "overlay": true
-      }
-    },
-    {
-      "rowId": "row3",
-      "images": [
-        "Kibo-test-images/kibo-gallery-1.1.jpeg",
-        "Kibo-test-images/kibo-gallery-2.jpeg",
-        "Kibo-test-images/kibo-gallery-3.jpeg",
-        "Kibo-test-images/kibo-gallery-4.0.jpeg",
-        "Kibo-test-images/kibo-gallery-1.jpeg",
-        "Kibo-test-images/kibo-gallery10.jpeg",
-        "Kibo-test-images/kibo-gallery-6.jpeg",
-        "Kibo-test-images/kibo-gallery-4.0.jpeg",
-        "vKibo-test-images/kibo-gallery-1.jpeg",
-        "Kibo-test-images/kibo-gallery-7.jpeg",
-        "Kibo-test-images/kibo-gallery8.jpeg",
-        "Kibo-test-images/kibo-gallery9.jpeg"
-        
-      ]
-    },
+    
     
     {
       "rowId": "row4",

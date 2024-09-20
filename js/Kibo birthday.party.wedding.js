@@ -91,18 +91,18 @@ function loadExternaljsonBirthday() {
                 break;
           
               case 'row3':
-                for (let j = 0; j < eventItem.images.length; j++) {
-                  const colDiv = document.createElement('div');
-                  colDiv.classList.add('col-md-3', 'mb-1', 'p-1');
-                  const img = document.createElement('img');
-                  img.classList.add('img-fluid', 'slow-load');
-                  img.id = ('events-images');
-                  img.src = 'Kibo-test-images/16-9-Light-grey-placeholder.png';
-                  img.setAttribute('data-src', eventItem.images[j]);
-                  img.alt = "star fish";
-                  colDiv.appendChild(img);
-                  rowDiv.appendChild(colDiv);
-                }
+                // for (let j = 0; j < eventItem.images.length; j++) {
+                //   const colDiv = document.createElement('div');
+                //   colDiv.classList.add('col-md-3', 'mb-1', 'p-1');
+                //   const img = document.createElement('img');
+                //   img.classList.add('img-fluid', 'slow-load');
+                //   img.id = ('events-images');
+                //   img.src = 'Kibo-test-images/16-9-Light-grey-placeholder.png';
+                //   img.setAttribute('data-src', eventItem.images[j]);
+                //   img.alt = "star fish";
+                //   colDiv.appendChild(img);
+                //   rowDiv.appendChild(colDiv);
+                // }
                 break;
           
               default:
