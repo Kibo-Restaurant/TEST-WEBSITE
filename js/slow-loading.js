@@ -14,7 +14,7 @@ const slowLoadMedia = () => {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     };
-    const slowMediaElements = document.querySelectorAll('.slow-load','.lazy-load');
+    const slowMediaElements = document.querySelectorAll('.slow-load');
     for (let i = 0; i < slowMediaElements.length; i++) {
         const media = slowMediaElements[i];
         const src = media.getAttribute('data-src');
