@@ -16,78 +16,22 @@ in order to place the images in place holders*/
       "Kibo-test-images/kibo-gallery9.jpeg" 
 ]
 };
-
-// const beachImagesFetching =   () => {
-//       const container = document.querySelector('.beach-content-container');
-//       if (!container) return false; // Return false if container is not found
-//     for (let i = 0; i < beachImages["beach-items"].length; i++) {
-//         container.classList.add('row');
-//         const colInrowDiv = document.createElement('div');
-//         colInrowDiv.classList.add('col-sm-12', 'col-md-4', 'mb-1', 'p-1');
-//         const img = document.createElement('img');
-//         img.classList.add('img-fluid', 'slow-load');
-//         img.id = ('events-images');
-//         // img.src = beachImages["beach-items"][i];
-//         img.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
-//         img.setAttribute('data-src', beachImages["beach-items"][i]);
-//         img.alt = "kibo-restaurant-beach-photos";
-        
-
-//        // Error handling for broken images
-//     img.onerror = function () {
-//       console.error('Image failed to load: ' + beachImages["beach-items"][i]);
-//       img.src = 'Kibo-test-images/16-9-Light-grey-placeholder.png'; // Fallback image
-//     };
-
-//         colInrowDiv.appendChild(img);
-//       //   rowDiv.appendChild(colInrowDiv);
-//         // Finally, append the colInrowDiv to your  container
-//        container.appendChild(colInrowDiv);
-//       }  
-//       return true; // Indicate that the function has completed successfully     
-// };
-
-// document.addEventListener('DOMContentLoaded', () => {
-  
-//   document.getElementById('loading').style.display ='block';
-//   document.getElementById('hide-video').style.display = 'none';
-//   document.getElementById('hide-footer').style.display = 'none';// Call the function to execute   
-//   const responseOk = beachImagesFetching();
-//      if(responseOk){
-//       initializeNavbar();
-//       slowLoadMedia();
-//       document.getElementById('hide-video').style.display = 'block';
-//       document.getElementById('hide-footer').style.display = 'block';
-//       document.getElementById('loading').style.display ='none';
-//      } else{
-      
-//      }
-
-// // Initialize carousel and navbar scripts only after content is fully loaded
-     
-//     //  responseOk === beachImagesFetching();
-        
-        
-            
-//     // Call slowLoadMedia initially and set an event listener for scroll and resize
-//     window.addEventListener('scroll', slowLoadMedia);
-//     window.addEventListener('resize', slowLoadMedia);
-// });
 const beachImagesFetching = () => {
   const container = document.querySelector('.beach-content-container');
-  if (!container) return false; // Return false if container is not found
+  if (!container) return false; 
+  // Return false if container is not found
   
   container.classList.add('row');
   const images = beachImages["beach-items"];
   let imagesLoaded = 0;
   let imagesStartedLoading = false; // Track when the first image starts loading
-
+  const allImages = images.length;
   for (let i = 0; i < images.length; i++) {
     const colInrowDiv = document.createElement('div');
-    colInrowDiv.classList.add('col-sm-12', 'col-md-4', 'mb-1', 'p-1');
+    colInrowDiv.classList.add('col-sm-12', 'col-md-4', 'p-2', 'justify-content-center', 'align-items-center');
     
     const img = document.createElement('img');
-    img.classList.add('img-fluid', 'slow-load');
+    img.classList.add('img-fluid', 'slow-load','m-2');
     img.src = './Kibo-test-images/16-9-Light-grey-placeholder.png'; // Initial placeholder
     img.setAttribute('data-src', images[i]); // Store actual image src for slow loading
     img.alt = "kibo-restaurant-beach-photos";
@@ -99,8 +43,7 @@ const beachImagesFetching = () => {
     actualImage.onload = () => {
       if (!imagesStartedLoading) {
         imagesStartedLoading = true; // Mark that loading has started
-        document.getElementById('hide-footer').style.display = 'block'; // Show footer when images start loading
-        document.getElementById('hide-video').style.display = 'block'; // Show video while waiting for images
+        
       }
       img.src = images[i]; // Replace placeholder with actual image
       imagesLoaded++;
@@ -109,6 +52,11 @@ const beachImagesFetching = () => {
       if (imagesLoaded === 1) {
         document.getElementById('loading').style.display = 'none'; // Hide loading gif when first image starts loading
       }
+      if(imagesLoaded === allImages ){
+        document.getElementById('events-videos').style.display ='block';
+        document.getElementById('hide-footer').style.display = 'block';
+      }
+     
     };
 
     // Error handling for broken images
@@ -127,7 +75,7 @@ const beachImagesFetching = () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Initially show the loading gif and hide video and footer
   document.getElementById('loading').style.display = 'block';
-  document.getElementById('hide-video').style.display = 'none';
+  document.getElementById('events-videos').style.display = 'none';
   document.getElementById('hide-footer').style.display = 'none';
   
   // Fetch images and handle visibility logic

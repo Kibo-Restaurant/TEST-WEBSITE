@@ -180,9 +180,7 @@ padding-right: 15px;
 }
 
 @media (max-width: 991px) {
-  .navbar-collapse {
-    display: none; /* Hidden by default */
-  }
+  
 }
 
 @media (max-width: 991px) {
@@ -980,6 +978,9 @@ padding-right:30px;
   #phone{
     font-size:65%;
   }
+  .text-onoverlay h3{
+    font-size:99.5%;
+   }
   
 
   }
@@ -1016,6 +1017,9 @@ padding-right:30px;
   object-fit: cover;
   overflow:hidden;
  }
+ .text-onoverlay h3{
+  font-size:99%;
+ }
   
 
 
@@ -1041,8 +1045,10 @@ padding-right:30px;
   }
   #panel-footer{
     text-align:center;
-
   }
+  .text-onoverlay h3{
+    font-size:98%;
+   }
  
 }
 
@@ -1093,7 +1099,9 @@ padding-right:30px;
     margin-bottom: 1px;
     padding-bottom: 0;
   }
-  
+  .text-onoverlay h3{
+    font-size:95%;
+   }
 }
 
 
@@ -1186,7 +1194,7 @@ padding-right:30px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border: 0.5px solid rgb(252, 248, 248);
+    /* border: 0.5px solid rgb(252, 248, 248); */
     /* height:200px;
     width:200px; */
     padding:2px;
@@ -1298,14 +1306,14 @@ padding-right:30px;
   background-image: url('../Kibo-test-images/background-tile-kibo-restaurant.png');
   /* background-size: cover; */
   background-position: cover;
-  border:none;
+ 
 }
-.menu-contents{
+/* .menu-contents{
   border:none;
 }
 .reduceimage{
   border:none;
-}
+} */
 
 /* .menu-box::before {
   content: "";
