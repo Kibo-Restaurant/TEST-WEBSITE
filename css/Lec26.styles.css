@@ -41,16 +41,40 @@ body{
   margin-top:0px;
   margin-bottom: 10px;
   line-height:1;
-  text-decoration:none; 
-  
+  text-decoration:none;  
+}
+.nav-item{
+  align-items: center;
+  margin-top:0px;
+}
+#nav-list {
+  color:#000000;
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-flow: 0;
+  /* flex-wrap: nowrap; Prevents wrapping */
+  align-items: center;
+  justify-content: space-between; /* Spreads out the items */
+  align-items: center; /* Vertically centers the items */
+  width: 90%; /* Ensures the nav items use the full width of the navbar */
 }
 
 
-#nav-list .nav-link {
+.nav-item span:hover, :focus{
+  text-decoration: underline;
+  text-underline-offset: 3px; /* Adds some space between the text and the underline */
+  text-decoration-thickness: 5px; /* Makes the underline a bit thicker*/
+  transition: text-decoration 0.3s ease;
+  text-decoration-color:#e0d3c2;
+}
   
+
+
+/* 
+#nav-list .nav-link {
   margin-top:10px;
   font-size: 16px;
-  
 }
 #nav-list {
   color:#000000;
@@ -58,18 +82,28 @@ body{
   align-items: center;
 }
 
+
 .nav-item :hover, :focus{
-  background: #E7E7E7;
-  background-size:auto;
-  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 3px; /* Adds some space between the text and the underline 
+  text-decoration-thickness: 5px; /* Makes the underline a bit thicker 
+  transition: text-decoration 0.3s ease;
+  text-decoration-color:#e0d3c2;
+ 
 }
 #nav-list span{
   font-size:1.8 em;
 }
-.serch-container{
+#nav-list .nav-item {
+  margin: 0; /* Remove extra margin 
+  padding: 0 10px; /* Add padding inside the items 
+} */
+.search-container{
   position: relative;
   display:flex;
   align-items: center;
+  width: 20%;
+  
 }
 .search-input{
   width:0;
@@ -77,7 +111,7 @@ body{
   transition: width 0.4s ease, opacity 0.4s ease;
   position: absolute;
   right: 30px;/* adjust as needed*/
-  top: 89%;
+  top: 100%;
   z-index:1000;
   transform: translateY(-0%);
 }
@@ -129,8 +163,7 @@ top:10%;
 }
 #phone div {/*Contact us*/
 color:#557C3E;
-text-align: ri
-3ght;
+text-align: right;
 padding-right: 15px;
 }
 /* Toggler button styling */
@@ -179,7 +212,7 @@ padding-right: 15px;
   display: block; /* Show the content */
 }
 
-@media (max-width: 991px) {
+@media (mix-width: 991px) {
   
 }
 
@@ -204,6 +237,13 @@ padding-right: 15px;
     align-items: flex-start; /* Align items to the start */
     padding: 5px 10px;
   }
+  
+  .search-container{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   width:100%;
+  }
 
   .navbar-nav .nav-item {
     padding: 2px 2px; /* Reduce padding between items */
@@ -213,6 +253,7 @@ padding-right: 15px;
   .navbar-nav .nav-link {
     font-size: 0.9em; /* Optional: reduce font size for a more compact look */
   }
+  
 }
 
 
@@ -275,6 +316,7 @@ padding-right: 15px;
   z-index:1000;
   top:0%;
 }
+
 /* @media screen  */
 /* #navbar-properties ul{
   justify-content:center;
@@ -284,6 +326,7 @@ width: -50%;
 height: -50%;
 transition: all 0.3s ease
 } 
+
   
 #trip-icon{
 max-width:50px;
@@ -634,6 +677,41 @@ line-height: 2;
 .next{
   right: 10px;
 }
+/* ORANGE PLACEHOLDER BEFORE CAROUSEL BEGINS*/
+#home-snippet-content {
+  position: relative; /* Make the parent container a positioning context */
+}
+
+#carousel-placeholder {
+  position: absolute; /* Position the placeholder absolutely */
+  top: 0; /* Align it to the top of the carousel */
+  left: 0; /* Align it to the left */
+  right: 0; /* Stretch to the right */
+  bottom: 0; /* Stretch to the bottom */
+  background-color: #ffa500; /* Optional: Add a background color */
+  color: rgb(7, 7, 7); /* Set text color */
+  display: flex; /* Use flex to center text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 10; /* Ensure it appears above other elements */
+  text-align: center;
+}
+
+.carousel {
+  position: relative; /* This allows the placeholder to be positioned correctly */
+  /* Add your carousel styles here */
+}
+/* #carousel-placeholder{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa500;
+  font-size: 20%;
+  height: 1000px;
+  color: black; 
+  text-align: center;
+  
+} */
 
 #menu-tile, #events-tile, #map-tile, #beach-bed-tile{
  height: 250px;
@@ -659,6 +737,12 @@ line-height: 2;
  background: url("../Kibo-test-images/fortam-beach.jpg") no-repeat;
   background-position:center;
   background-size: cover;
+}
+#events-tile{
+  background: url("../Kibo-test-images/events-kibo-restaurant-watamu (2).jpeg") no-repeat;
+  background-position:center;
+  background-size: cover;
+
 }
 
 
@@ -976,7 +1060,7 @@ padding-right:30px;
     max-height: 45px;
   }
   #phone{
-    font-size:65%;
+    font-size:100%;
   }
   .text-onoverlay h3{
     font-size:99.5%;
@@ -1298,6 +1382,33 @@ padding-right:30px;
     height: auto;
     object-fit: cover; /* Cover the container without distorting aspect ratio */
   }
+  #nav-list{
+    display:flex;
+    justify-content: center;
+    font-size:16px;
+  }
+  #nav-list .nav-link{
+    padding:0;
+
+  }
+  /* #nav-list {
+    display: flex;
+    /* flex-wrap: nowrap; Prevents wrapping *
+    justify-content: center; /* Center items *
+  } */
+  
+  /* .nav-item {
+    margin: 0px; /* Adjust margin between nav items *
+    text-align: center; /* Center the text and icon *
+  } */
+
+  /* #nav-list .nav-link {
+    display: flex; /* Use flex for proper alignment *
+    flex-direction: column; /* Stack text and icon *
+    align-items: center; /* Center items vertically *
+  } */
+
+  
   
 }
 
@@ -1308,6 +1419,58 @@ padding-right:30px;
   background-position: cover;
  
 }
+
+@media (max-width: 991px) and (min-width: 320px) {
+  #nav-list .nav-item {
+    display: inline-block;
+    margin: 0 ; /* Adjust spacing between items */
+    padding: 0; /* Adjust padding if needed */
+  }
+  
+  #nav-list .nav-link {
+    display: inline-flex;
+    
+    align-items: center; /* Vertically align icon and text */
+    font-size: 14px; /* Reduce font size for better fit */
+    padding: 5px; /* Adjust padding inside nav links */
+    
+  }
+  #nav-list .nav-link i {
+    margin-right: 10px; /* Increase space between icon and text */
+    font-size: 14px; /* Adjust icon size if needed */
+  }
+
+  #nav-list .nav-item span {
+    display: block;
+    text-align: center;
+  }
+  
+}
+@media(min-width:992px) and (max-width:1260px) {
+  #phone{
+    margin-top:-30px;
+    
+  }
+  
+  
+}
+@media(min-width:1089px) and (max-width:1260px) {
+  #restaurant-name {
+    padding:0;
+    margin: 0; /* Reset margin to avoid unnecessary space */
+    line-height: 1; /* Keep the line height the same */
+    text-decoration: none;
+    white-space: nowrap; /* Prevents text from breaking onto a new line */
+  }
+  
+  /* Ensure the parent container is set up correctly */
+  .container-fluid {
+    display: flex; /* Enable flexbox for proper alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Adjust space as needed */
+  }
+}
+
 /* .menu-contents{
   border:none;
 }
