@@ -120,16 +120,19 @@ window.addEventListener('click', (event) => {
  //NAVBAR REDUCE ON SCROLL DOWN
  const navShrink = document.querySelector('.navbar');
  const shrinkLogo = document.getElementById('custom-logo');
+ const smallNavItems = document.querySelector('.nav-item');
  
  window.addEventListener('scroll', () =>{
    
     if(window.scrollY >200){
-      // When scrolled down more than 300px
+      // When scrolled down more than 200px
      navShrink.id = 'navbar-properties';
+     smallNavItems.id = 'items-resize';
      shrinkLogo.id = 'shrink-logo';
     }
     else {
      // When scrolled up less than 300px
+    
      navShrink.id = ''; // Resetting ID or remove if no longer needed // or navShrink.removeAttribute('id');
      shrinkLogo.id = 'custom-logo';
    }

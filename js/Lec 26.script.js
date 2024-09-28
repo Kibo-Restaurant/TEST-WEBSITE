@@ -51,9 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(() => {
          //Show footer
          document.getElementById('hide-footer').style.display ='block';
+         
+        // Initialize carousel and navbar scripts only after content is fully loaded
+        // Check if carousel is loaded and initialize it
+        const carouselElement = document.querySelector('.carousel-container');
+        if (carouselElement) {
+            initializeCarousel(); // Initialize carousel only if it exists
+        } else {
+            console.error('Carousel element not found in the loaded content.');
+        }
         // Initialize carousel and navbar scripts only after content is fully loaded
         initializeCarousel();
-        initializeNavbar();
+        
     })
     .catch(error => {
         console.error('Error loading content:', error);

@@ -6,14 +6,17 @@ in order to place the images in place holders*/
       "Kibo-test-images/kibo-gallery-2.jpeg",
       "Kibo-test-images/kibo-gallery-3.jpeg",
       "Kibo-test-images/kibo-gallery-4.0.jpeg",
-      "Kibo-test-images/kibo-gallery-1.jpeg",
+      "Kibo-test-images/beach-tables2-kibo-restaurant-watmu.jpeg",
       "Kibo-test-images/kibo-gallery10.jpeg",
       "Kibo-test-images/kibo-gallery-6.jpeg",
       "Kibo-test-images/kibo-gallery-4.0.jpeg",
       "Kibo-test-images/kibo-gallery-1.jpeg",
-      "Kibo-test-images/kibo-gallery-7.jpeg",
+      "Kibo-test-images/beach-tables-kibo-restaurant-watamu.jpeg",
       "Kibo-test-images/kibo-gallery8.jpeg",
-      "Kibo-test-images/kibo-gallery9.jpeg" 
+      "Kibo-test-images/beach-tables4-kibo-restaurant-watamu.jpeg",
+      "Kibo-test-images/beach-tables5-restaurant-watamu.jpeg",
+      "Kibo-test-images/beach-tables6-restaurant-watamu.jpeg",
+      "Kibo-test-images/beach-tables3-kibo-restaurant-watamu.jpeg" 
 ]
 };
 const beachImagesFetching = () => {
