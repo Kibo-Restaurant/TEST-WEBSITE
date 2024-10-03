@@ -23,32 +23,8 @@ document.addEventListener('DOMContentLoaded', () =>{
   //FUNCTION intializeNavBar waits for lec 26.script to Load first( promise-resolve, reject)
 function initializeNavbar() {
 
- //MAKING THE SEARCH BUTTON SEARCH EVERYWHERE- Tutor -I Will do  this later
- const searchBtn = document.getElementById('search-btn');
- const searchInput = document.getElementById('search-input');
- const searchContainer = document.querySelector('.search-container');
- const closeBtn = document.getElementById('close-btn');
  
- searchBtn.addEventListener('click', ()=>{
-    searchContainer.classList.add('active');
-    searchInput.focus();
- });
  
- closeBtn.addEventListener('click', () =>{
-     searchContainer.classList.add('active');
-     searchInput.focus();
- });
- 
- closeBtn.addEventListener('click', () =>{
-     searchContainer.classList.remove('active');
-     searchInput.value ='';
- });
- 
- document.addEventListener('click', (e)=>{
-     if(!searchContainer.contains(e.target) && e.target !== searchBtn) {
-         searchContainer.classList.remove('active');
-     }
- });
  //FUNCTIONS WAITING FOR DOM CONTENT TO LOAD
  
  //TRANFORMING THE HAMBURGER BUTTON INTO AN X
@@ -204,7 +180,9 @@ window.addEventListener('click', (event) => {
  prevNxtAdvisors();
  moveAdvisor(nowAdvisor);
 
- //THIS makes video mute and autoplay in all browsers
+ 
+
+
  
 
 }
