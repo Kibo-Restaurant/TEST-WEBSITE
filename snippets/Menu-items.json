@@ -1,6 +1,7 @@
 {
   "menu-items": [
     {
+      "idtile": "Grilled sea food",
       "texttile": "Grilled sea food",
       "imagetile1": "Kibo-test-images/sea-foodhuge.jpg",
       "imagetile2": "Kibo-test-images/sea-foodhuge2.jpg",
@@ -8,12 +9,14 @@
       
     },
     {
+      "idtile": "Vegetarian food",
       "texttile": "Vegetarian food",
       "imagetile1": "Kibo-test-images/vegetarian-menu.jpg",
       "imagetile2": "Kibo-test-images/Vegetarian-menu4.jpg",
       "imagetile3": "Kibo-test-images/Vegetarian-menu2.jpg" 
     },
     {
+      "idtile": "Cocktails",
       "texttile": "Cocktails",
       "imagetile1": "Kibo-test-images/cocktails-kibo.jpg",
       "imagetile2": "Kibo-test-images/cocktails-kibo2.jpg",
@@ -21,6 +24,7 @@
       
     },
     {
+      "idtile": "Curries",
       "texttile": "Curries",
       "imagetile1": "Kibo-test-images/curry-menu.jpg",
       "imagetile2": "Kibo-test-images/Curry-menu4.jpg",
@@ -28,6 +32,7 @@
       
     },
     {
+      "idtile": "Tropical Fruits",
       "texttile": "Tropical Fruits",
       "imagetile1": "Kibo-test-images/fruits-menu.jpg",
       "imagetile2": "Kibo-test-images/Fruits-menu5.jpg",
@@ -35,6 +40,7 @@
       
     },
     {
+      "idtile": "Swahili Dishes",
       "texttile": "Swahili Dishes",
       "imagetile1": "Kibo-test-images/ugali-fish-kibo-restaurant.jpeg",
       "imagetile2": "Kibo-test-images/ugali-nyamachoma-kibo-restaurant.jpeg",

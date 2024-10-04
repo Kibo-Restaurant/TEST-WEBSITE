@@ -56,6 +56,7 @@ function loadExternaljsonMenu() {
 
                     // Create a column for each menu category
                     const column = document.createElement('div');
+                    column.id = item.idtile;
                     column.classList.add('col-sm-12', 'col-lg-6', 'menu-contents');
 
                     // Create the first row (1 textblock and one image: Texttile1 and imagetile1)
@@ -76,6 +77,7 @@ function loadExternaljsonMenu() {
                     // img1.src = item.imagetile1;
                     
                     img1.classList.add('slow-load','img-fluid');
+                    img1.id = item.idtile;
                     img1.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
                     img1.setAttribute('data-src',item.imagetile1);
                     img1.alt = item.imagetile2.alt;

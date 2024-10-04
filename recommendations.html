@@ -104,53 +104,20 @@
     <div id="recommendations-container" class="search-results-container"></div>
 
     </div>
+    
+</div>
+<div class="whatsapp-container">
+  <a href="https://wa.me/254715408584" target="_blank" class="whatsapp-icon">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <span class="whatsapp-text">Ask about food<span role="img" aria-label="hand wave" class="emoji">&#128075;</span> </span><!--html entity (&#number) can be replaced with a waving hand direct emoji(👋)-->
+  </div>
+  <!-- back to TOP BUTTTON -->
+<button id="back-to-top" aria-label="Back to Top">&#8679;</button>
 
     <script src="js/search-button.js"></script>
-    <!-- <script src="js/Navbar  & in page functions.js"></script> -->
-    <script>
-        // Function to display search results
-        function displayResults(results) {
-          const container = document.getElementById('recommendations-container');
-    
-          if (results.length === 0) {
-            // Display friendly message if no results found
-            container.innerHTML = `
-              <div class="no-results">
-                <p>No results found. Please contact Kibo for more info.</p>
-                <p>Who knows, we may just have what you need 😊</p>
-              </div>
-            `;
-          } else {
-            // Loop through each result and display it
-            results.forEach(item => {
-              const itemDiv = document.createElement('div');
-              itemDiv.classList.add('item');
-    
-              itemDiv.innerHTML = `
-                <img src="${item.imagetile1}" alt="${item.texttile}">
-                <div>
-                  <h2>${item.texttile}</h2>
-                  <a href="Kibo Full Menu.html?category=${encodeURIComponent(item.texttile)}">Go to ${item.texttile}</a>
-                </div>
-              `;
-    
-              container.appendChild(itemDiv);
-            });
-          }
-        }
-    
-        // Function to get search results from localStorage
-        function getSearchResults() {
-          const results = localStorage.getItem('searchResults');
-          return results ? JSON.parse(results) : [];
-        }
-    
-        // On page load, display the results
-        window.onload = () => {
-          const searchResults = getSearchResults();
-          displayResults(searchResults);
-        };
-        
-      </script>
+    <script src="js/Navbar  & in page functions.js"></script>
+    <!-- JavaScript to handle search result rendering and scrolling -->
+<script src="js/recommendations.js"> </script>
 </body>
 </html>
