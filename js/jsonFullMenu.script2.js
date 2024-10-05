@@ -1,22 +1,4 @@
-//NAVBAR COLLAPSING
-// document.addEventListener('DOMContentLoaded', () =>{
-//     const navbarToggler = document.querySelector('.navbar-toggler');
-//     const navbarCollapse = document.querySelector('#navbarSupportedContent'); //Tutor-please find navSupported content id in bootstrap css
-// //Collapse the navbar only if focus is moved outside the navbar_Tutor should break this down
-// document.addEventListener('click', (event) => {
-//     const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
-//     if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')){
-//         navbarCollapse.classList.remove('show');
-//     }
-// });
-//     // // If you want to Collapse the navbar when the toggler loses focus
-// //      navbarToggler.addEventListener('blur', () => {
 
-// //       if(navbarCollapse.classList.contains('show')) {
-// //          navbarCollapse.classList.remove('show');
-// //      }
-
-//    });
 function loadExternaljsonMenu() {
     return new Promise((resolve, reject) => {
         // Show the loading gif
@@ -72,15 +54,15 @@ function loadExternaljsonMenu() {
 
                     // Image block (imagetile1)
                     const col1Img1 = document.createElement('div');
-                    col1Img1.classList.add('reduce-image','slow-load');
+                    col1Img1.classList.add('reduce-image','slow-load','lazy-load');
                     const img1 = document.createElement('img');
                     // img1.src = item.imagetile1;
                     
                     img1.classList.add('slow-load','img-fluid');
                     img1.id = item.idtile;
-                    img1.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
+                    img1.src = 'Kibo-test-images/sixteen-nine-Light-grey-placeholder.png';
                     img1.setAttribute('data-src',item.imagetile1);
-                    img1.alt = item.imagetile2.alt;
+                    img1.alt = item.alttext;
                     col1Img1.appendChild(img1);
                     
                     // Append col1Text and col1Img1 to row1
@@ -96,10 +78,10 @@ function loadExternaljsonMenu() {
                     col1Img2.classList.add('reduce-image');
                     const img2 = document.createElement('img');
                     // img2.src = item.imagetile2; //quest to placeholder
-                    img2.classList.add('slow-load','img-fluid');
-                    img2.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
+                    img2.classList.add('slow-load','img-fluid','lazy-load');
+                    img2.src = 'Kibo-test-images/sixteen-nine-Light-grey-placeholder.png';
                     img2.setAttribute('data-src',item.imagetile2);
-                    img2.alt = item.imagetile2.alt;
+                    img2.alt = item.alttext;
                     col1Img2.appendChild(img2);
 
                     // Image block (imagetile3)
@@ -108,10 +90,10 @@ function loadExternaljsonMenu() {
                     const img3 = document.createElement('img');
                     // img3.src = item.imagetile3;
     
-                    img3.classList.add('slow-load','img-fluid');
-                    img3.src = './Kibo-test-images/16-9-Light-grey-placeholder.png';
+                    img3.classList.add('slow-load','img-fluid','lazy-load');
+                    img3.src = 'Kibo-test-images/sixteen-nine-Light-grey-placeholder.png';
                     img3.setAttribute('data-src',item.imagetile3);
-                    img3.alt = item.imagetile3.alt;
+                    img3.alt = item.alttext;
                     col1Img3.appendChild(img3);
 
                     // Append col1Img2 and col1Img3 to row2

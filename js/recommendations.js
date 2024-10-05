@@ -74,5 +74,6 @@
         targetElement.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    initializeNavbar()
   }
   
