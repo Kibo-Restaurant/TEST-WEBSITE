@@ -34,8 +34,8 @@ const beachImagesFetching = () => {
     colInrowDiv.classList.add('col-sm-12', 'col-md-4', 'p-2', 'justify-content-center', 'align-items-center');
     
     const img = document.createElement('img');
-    img.classList.add('img-fluid', 'slow-load','m-2');
-    img.src = './Kibo-test-images/16-9-Light-grey-placeholder.png'; // Initial placeholder
+    img.classList.add('img-fluid', 'slow-load','m-2','image-float');
+    img.src = 'Kibo-test-images/sixteen-nine-Light-grey-placeholder.png'; // Initial placeholder
     img.setAttribute('data-src', images[i]); // Store actual image src for slow loading
     img.alt = "kibo-restaurant-beach-photos";
 
@@ -65,7 +65,7 @@ const beachImagesFetching = () => {
     // Error handling for broken images
     actualImage.onerror = () => {
       console.error('Image failed to load: ' + images[i]);
-      img.src = 'Kibo-test-images/16-9-Light-grey-placeholder.png'; // Fallback image
+      img.src = 'Kibo-test-images/sixteen-nine-Light-grey-placeholder.png'; // Fallback image
     };
 
     colInrowDiv.appendChild(img);

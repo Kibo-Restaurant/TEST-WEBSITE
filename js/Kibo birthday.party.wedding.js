@@ -68,42 +68,7 @@ function loadExternaljsonBirthday() {
                 }
                 break;
           
-              case 'row2':
-                // const videoWrapper = document.createElement('div');
-                // videoWrapper.classList.add('video-carousel-wrapper');
-                // const video = document.createElement('video');
-                // video.classList.add('carousel-video','slow-load');
-                // video.id = ('events-videos');
-                // // video.poster = '/Kibo test images/16-9 Light grey placeholder.png';
-                // video.setAttribute('data-src',eventItem.video.src); 
-                // video.autoplay = true;
-                // video.muted = true;
-                // video.loop = true;
-                // video.playsInline = true;
-          
-                // videoWrapper.appendChild(video);
-                // if (eventItem.video.overlay) {
-                //   const overlay = document.createElement('div');
-                //   overlay.classList.add('overlay');
-                //   videoWrapper.appendChild(overlay);
-                // }
-                // rowDiv.appendChild(videoWrapper);
-                break;
-          
-              case 'row3':
-                // for (let j = 0; j < eventItem.images.length; j++) {
-                //   const colDiv = document.createElement('div');
-                //   colDiv.classList.add('col-md-3', 'mb-1', 'p-1');
-                //   const img = document.createElement('img');
-                //   img.classList.add('img-fluid', 'slow-load');
-                //   img.id = ('events-images');
-                //   img.src = 'Kibo-test-images/16-9-Light-grey-placeholder.png';
-                //   img.setAttribute('data-src', eventItem.images[j]);
-                //   img.alt = "star fish";
-                //   colDiv.appendChild(img);
-                //   rowDiv.appendChild(colDiv);
-                // }
-                break;
+              
           
               default:
                 console.log('Unknown rowId: ', eventItem.rowId);
@@ -143,9 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Initialize carousel and navbar scripts only after content is fully loaded
       initializeNavbar();
       slowLoadMedia();
-      intializeVideoSettings()
-      //Show footer
-      document.getElementById('hide-video').style.display ='block';
+     
+      
       
   })
   .catch(error => {
@@ -156,13 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', slowLoadMedia);
 });
 
-function intializeVideoSettings(){
-  const videoElement = document.querySelector('.carousel-video');
-      //const overlay = document.querySelector('.overlay');//tO AVOID FLICKERING I used html and css only.
-     //Ensure the video starts playing especially on some browsersthat might prevent autoplay
-     videoElement.play().catch(error =>{
-     console.log('Autoplay prevented, trying to play video again:', error);
-     videoElement.muted = true; //Ensures it's muted
-     videoElement.play();
-     }); 
-}
+//
+
+// function intializeVideoSettings(){
+//   const videoElement = document.querySelector('.carousel-video');
+//       //const overlay = document.querySelector('.overlay');//tO AVOID FLICKERING I used html and css only.
+//      //Ensure the video starts playing especially on some browsersthat might prevent autoplay
+//      videoElement.play().catch(error =>{
+//      console.log('Autoplay prevented, trying to play video again:', error);
+//      videoElement.muted = true; //Ensures it's muted
+//      videoElement.play();
+//      }); 
+// }
